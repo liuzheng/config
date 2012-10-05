@@ -1,4 +1,60 @@
-export PS1='\033[1;32;48m[\033[1;31;48m\u\033[1;31;48m@\033[4;32;48m\h\033[0;32;48m:\033[1;32;40m\w\033[0;32;48m\033[1;32;48m]     \033[1;32;40m>>\t<<\033[0;32;49m\n\[\033[1;31;48m\]\$ \[\e[0m\]'
+﻿export PS1='\033[1;32;48m[\033[1;31;48m\u\033[1;31;48m@\033[4;32;48m\h\033[0;32;48m:\033[1;32;40m\w\033[0;32;48m\033[1;32;48m]     \033[1;32;40m>>\t<<\033[0;32;49m\n\[\033[1;31;48m\]\$ \[\e[0m\]'
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 
+#===================alias=======================
+# ls
+alias la='ls -Al'
+alias ls='ls -hF --color'
+alias lx='ls -lXB'
+alias lk='ls -lSr'
+alias lc='ls -lcr'
+alias lu='ls -lur'
+alias lr='ls -lR'
+alias lt='ls -ltr'
+alias lm='ls -al |more'
+
+# hand wrong
+alias vf='cd'
+alias xs='cd'
+alias ks='ls'
+alias kk='ll'
+alias moew='more'
+
+# df
+alias dfh='df -h'
+
+
+#===================alias end===================
+
+#===================function====================
+
+# get ip
+function myip()
+{
+    MY_IP=$(/sbin/ifconfig ppp0 | awk '/inet/ { print $2 } ' | sed -e s/addr://)
+    MY_ISP=$(/sbin/ifconfig ppp0 | awk '/P-t-P/ { print $3 } ' | sed -e s/P-t-P://)
+}
+
+# get local computer info
+function ii()
+{
+    echo -e "\nYou are logged on ${RED}$HOST"
+    echo -e "\nAdditionnal information:$NC " ; uname -a
+    echo -e "\n${RED}Users logged on:$NC " ; w -h
+    echo -e "\n${RED}Current date :$NC " ; date
+    echo -e "\n${RED}Machine stats :$NC " ; uptime
+    echo -e "\n${RED}Memory stats :$NC " ; free
+    my_ip 2>&- ;
+    echo -e "\n${RED}Local IP Address :$NC" ; echo ${MY_IP:-"Not connected"}
+    echo -e "\n${RED}ISP Address :$NC" ; echo ${MY_ISP:-"Not connected"}
+    echo
+}
+
+# find text in the file
+function ffi() { grep -D skip -nRe "$1" . }
+
+# find file name
+function ff() { find . -type f -iname '*'$*'*' -ls ; }
+
+#==================function end=================
