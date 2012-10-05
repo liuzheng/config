@@ -27,6 +27,18 @@ alias dfh='df -h'
 
 #===================alias end===================
 
+#====================color======================
+
+red='\e[0;31m'
+RED='\e[1;31m'
+blue='\e[0;34m'
+BLUE='\e[1;34m'
+cyan='\e[0;36m'
+CYAN='\e[1;36m'
+NC='\e[0m'
+
+#==================color end====================
+
 #===================function====================
 
 # get ip
@@ -36,23 +48,26 @@ function myip()
     MY_ISP=$(/sbin/ifconfig ppp0 | awk '/P-t-P/ { print $3 } ' | sed -e s/P-t-P://)
 }
 
+# find text in the file
+function ffi()
+{
+grep -D skip -nRe "$1" .
+}
+
 # get local computer info
 function ii()
 {
-    echo -e "\nYou are logged on ${RED}$HOST"
+    echo -e "\nYou are logged on $(RED)#HOST"
     echo -e "\nAdditionnal information:$NC " ; uname -a
     echo -e "\n${RED}Users logged on:$NC " ; w -h
     echo -e "\n${RED}Current date :$NC " ; date
     echo -e "\n${RED}Machine stats :$NC " ; uptime
     echo -e "\n${RED}Memory stats :$NC " ; free
-    my_ip 2>&- ;
+    myip 2>&- ;
     echo -e "\n${RED}Local IP Address :$NC" ; echo ${MY_IP:-"Not connected"}
     echo -e "\n${RED}ISP Address :$NC" ; echo ${MY_ISP:-"Not connected"}
     echo
 }
-
-# find text in the file
-function ffi() { grep -D skip -nRe "$1" . }
 
 # find file name
 function ff() { find . -type f -iname '*'$*'*' -ls ; }
