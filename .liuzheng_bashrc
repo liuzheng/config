@@ -29,6 +29,13 @@ alias dfh='df -h'
 alias mk="make"
 alias mki="make install"
 
+# clc
+alias clc="clear"
+alias lcl="clear"
+
+# cd
+alias c="cd"
+
 #===================alias end===================
 
 #====================color======================
