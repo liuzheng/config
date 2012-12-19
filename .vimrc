@@ -81,6 +81,7 @@ autocmd FileType matlab     :source ~/config/setup/matlab.vim     "Matlab mode" 
 au BufNewFile,BufRead *.py,*.pyw setf python
 autocmd BufNewFile *.m      0r ~/config/simple/simple.m
 autocmd BufNewFile *.py     0r ~/config/simple/simple.py
+autocmd BufNewFile *.tex    0r ~/config/simple/simple.tex
 
 au GUIEnter * simalt ~x
 
