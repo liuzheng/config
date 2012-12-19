@@ -95,6 +95,10 @@ function ii()
 # find file name
 function ff() { find . -type f -iname '*'$*'*' -ls ; }
 
+function gb2utf()
+{
+    iconv -f gb2312 -t utf-8 $1>$1+f && mv $1+f $1
+}
 #==================function end=================
 
 #=================complete======================
