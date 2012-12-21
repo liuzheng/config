@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/media/hello/git_project/nonimaging'
+let g:netrw_dirhist_2='/media/hello/git_project/nonimaging/setup'
+let g:netrw_dirhist_3='/media/hello/git_project/nonimaging'
+let g:netrw_dirhist_4='/media/hello/git_project/nonimaging/body'
+let g:netrw_dirhist_5='/media/hello/git_project/nonimaging'
+let g:netrw_dirhist_6='/media/hello/git_project/nonimaging/body'
+let g:netrw_dirhist_7='/media/hello/git_project/nonimaging'
