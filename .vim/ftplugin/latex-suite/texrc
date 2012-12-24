@@ -747,8 +747,15 @@ TexLet g:Tex_InternalTagsDefinitions = 1
 
 " }}}
 " ============================================================================== 
+"====================F8 RunTex===========================
 map <F8> :call RunTeX()<CR>
 func! RunTeX()
     exec "w"
-    exec "!xelatex %"
+"    exec "!rm %:r.pdf"
+    exec "!xelatex %<"
+endfunc
+"=====================F9 show pdf=========================
+map <F9> :call Showpdf()<CR>
+func! Showpdf()
+    exec "!acroread %:r.pdf &"
 endfunc
