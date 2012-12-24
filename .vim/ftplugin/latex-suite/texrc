@@ -747,3 +747,8 @@ TexLet g:Tex_InternalTagsDefinitions = 1
 
 " }}}
 " ============================================================================== 
+map <F8> :call RunTeX()<CR>
+func! RunTeX()
+    exec "w"
+    exec "!xelatex %"
+endfunc
