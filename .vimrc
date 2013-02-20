@@ -74,6 +74,8 @@ autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType c set omnifunc=ccomplete#Complete
+autocmd FileType cl set omnifunc=ccomplete#Complete
+autocmd FileType cu set omnifunc=ccomplete#Complete
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType ruby set omnifunc=rubycomplete#Completeruby
 autocmd FileType sql set omnifunc=sqlcomplete#Completesql
@@ -82,6 +84,8 @@ au BufNewFile,BufRead *.py,*.pyw setf python
 autocmd BufNewFile *.m      0r ~/config/simple/simple.m
 autocmd BufNewFile *.py     0r ~/config/simple/simple.py
 autocmd BufNewFile *.tex    0r ~/config/simple/simple.tex
+autocmd BufNewFile *.cl    0r ~/config/simple/simple.cl
+autocmd BufNewFile *.cu    0r ~/config/simple/simple.cu
 
 au GUIEnter * simalt ~x
 
