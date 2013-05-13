@@ -1,10 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/media/hello/git_project/nonimaging'
-let g:netrw_dirhist_2='/media/hello/git_project/nonimaging/setup'
-let g:netrw_dirhist_3='/media/hello/git_project/nonimaging'
-let g:netrw_dirhist_4='/media/hello/git_project/nonimaging/body'
-let g:netrw_dirhist_5='/media/hello/git_project/nonimaging'
-let g:netrw_dirhist_6='/media/hello/git_project/nonimaging/body'
-let g:netrw_dirhist_7='/media/hello/git_project/nonimaging'
-let g:netrw_dirhist_8='/etc/sysconfig'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/'
+let g:netrw_dirhist_2='/etc'
+let g:netrw_dirhist_3='/etc/bash'

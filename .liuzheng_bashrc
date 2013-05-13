@@ -5,6 +5,7 @@ bind '"\e[B": history-search-forward'
 
 #===================alias=======================
 # ls
+alias ll='ls -l'
 alias la='ls -Al'
 alias ls='ls -hF --color'
 alias lx='ls -lXB'
