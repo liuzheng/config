@@ -14,7 +14,7 @@ set ruler			"打开状态栏标尺
 set incsearch		"输入搜索内容时就显示搜索结果
 set hlsearch		"搜索时高亮显示被找到的文本
 set ignorecase		"搜索时忽略大小写
-set fileencoding=utf-8	"文件默认编码
+set enc=utf8	"文件默认编码
 set fileencodings=utf-8,ucs-bom,cp936,gb2312,gbk,gb18030,big5,euc-jp,euc-kr,latin1 "检测编码顺序
 set showmatch		"高亮匹配的括号
 set matchtime=5		"匹配括号高亮的时间（单位时十分之一秒）
