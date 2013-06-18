@@ -24,9 +24,9 @@ set completeopt+=longest    " 让Vim的补全菜单行为与一般IDE一致(参�
 set shortmess=atI	" 启动的时候不显示那个援助索马里儿童的提示
 colorscheme desert	"配色方案
 syntax on			"自动语法高亮
-filetype on
-filetype plugin indent on
-filetype indent on
+filetype off
+"filetype plugin indent on
+"filetype indent on
 set ambiwidth=double    " 中文引号显示
 set showcmd         " 显示输入的命令
 behave mswin		" 鼠标使用微软习惯，支持右键菜单
@@ -212,3 +212,8 @@ filetype indent on
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
+set nocompatible    " be iMproved
+set rtp+=~/.vim/bundle/vundle/
+
+call vundle#rc()
+Bundle 'gmarik/vundle'
