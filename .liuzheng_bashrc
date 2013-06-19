@@ -89,7 +89,7 @@ git submodule add $1 .vim/bundle/$name
 }
 
 # pathogen git pull all
-function vimupdate
+function vimupdate()
 {
 git submodule foreach 'git checkout master && git pull'
 }
