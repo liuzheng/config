@@ -73,6 +73,13 @@ BLACK=$'\e[1;30m'
 
 #===================function====================
 
+# pathogen rm bundle
+function vimrm()
+{
+rm -rf $1
+git rm -r $1
+}
+
 # get ip
 function myip()
 {
