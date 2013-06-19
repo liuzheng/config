@@ -44,6 +44,7 @@ alias gitp='git pull'
 alias gita='git add'
 alias gitA='git add -A'
 alias gitm='git commit'
+alias gitM='git commit -m'
 alias gits='git push'
 
 #===================alias end===================
