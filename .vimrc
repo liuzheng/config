@@ -23,7 +23,7 @@ set listchars=tab:\|\ ,trail:.,extends:>,precedes:<,eol:$	"输入:set list命令
 set completeopt+=longest    " 让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
 set shortmess=atI	" 启动的时候不显示那个援助索马里儿童的提示
 colorscheme desert	"配色方案
-syntax on			"自动语法高亮
+syntax off			"自动语法高亮
 filetype off
 "filetype plugin indent on
 "filetype indent on

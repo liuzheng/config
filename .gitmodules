@@ -58,3 +58,15 @@
 [submodule ".vim/bundle/vim-colors-solarized"]
 	path = .vim/bundle/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule ".vim/bundle/vim-css-color"]
+	path = .vim/bundle/vim-css-color
+	url = https://github.com/skammer/vim-css-color.git
+[submodule ".vim/bundle/vim-stylus"]
+	path = .vim/bundle/vim-stylus
+	url = https://github.com/wavded/vim-stylus.git
+[submodule ".vim/bundle/vim-texlog"]
+	path = .vim/bundle/vim-texlog
+	url = https://github.com/glts/vim-texlog.git
+[submodule ".vim/bundle/matlab.vim"]
+	path = .vim/bundle/matlab.vim
+	url = https://github.com/vim-scripts/matlab.vim.git
