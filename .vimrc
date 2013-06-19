@@ -217,3 +217,6 @@ set rtp+=~/.vim/bundle/vundle/
 
 call vundle#rc()
 Bundle 'gmarik/vundle'
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
+Helptags
