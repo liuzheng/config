@@ -80,6 +80,19 @@ rm -rf $1
 git rm -r $1
 }
 
+# pathogen git add
+function vimgit()
+{
+name=`echo $1|sed 's/.*\/\(.*\)\.git/\1/g'`
+git submodule add $1 .vim/bundle/$name
+}
+
+# pathogen git pull all
+function vimupdate
+{
+git submodule foreach 'git checkout master && git pull'
+}
+
 # get ip
 function myip()
 {
