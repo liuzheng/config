@@ -116,11 +116,10 @@ inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" :"\<PageDown
 inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" :"\<PageUp>"
 
 "-----------------------------------------------------------------
-" tag list
+" TagList
 "-----------------------------------------------------------------
-let Tlist_Use_Right_Window=1
-let Tlist_File_Fold_Auto_Close=1
-let g:explShowHiddenFiles = 1
+let Tlist_Show_One_File=1
+let Tlist_Exit_OnlyWindow=1
 
 "-----------------------------------------------------------------
 " F1....
