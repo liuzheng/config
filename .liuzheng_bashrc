@@ -42,6 +42,7 @@ alias gitc='git clone'
 alias gpom='git push origin master'
 alias gitp='git pull'
 alias gita='git add'
+alias gitA='git add -A'
 alias gitm='git commit'
 alias gits='git push'
 
