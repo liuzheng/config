@@ -70,3 +70,12 @@
 [submodule ".vim/bundle/matlab.vim"]
 	path = .vim/bundle/matlab.vim
 	url = https://github.com/vim-scripts/matlab.vim.git
+[submodule ".vim/bundle/matlabvimcolours"]
+	path = .vim/bundle/matlabvimcolours
+	url = https://github.com/iveney/matlabvimcolours.git
+[submodule ".vim/bundle/vim-matlab-fold"]
+	path = .vim/bundle/vim-matlab-fold
+	url = https://github.com/djoshea/vim-matlab-fold.git
+[submodule ".vim/bundle/vim-matlab"]
+	path = .vim/bundle/vim-matlab
+	url = https://github.com/sgeb/vim-matlab.git

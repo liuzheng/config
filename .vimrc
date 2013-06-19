@@ -23,7 +23,7 @@ set listchars=tab:\|\ ,trail:.,extends:>,precedes:<,eol:$	"输入:set list命令
 set completeopt+=longest    " 让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
 set shortmess=atI	" 启动的时候不显示那个援助索马里儿童的提示
 colorscheme desert	"配色方案
-syntax off			"自动语法高亮
+syntax on			"自动语法高亮
 filetype off
 "filetype plugin indent on
 "filetype indent on
@@ -89,6 +89,7 @@ autocmd BufNewFile *.cu    0r ~/config/simple/simple.cu
 
 au GUIEnter * simalt ~x
 
+"-----------------powerful command complete---------------------------
 set wildmenu                       " 命令行补全使用增强模式
 set wildmode=list:longest          " 补全时显示样式为多行
 set wildignore+=.hg,.git,.svn                    " 版本控制
@@ -99,6 +100,7 @@ set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg   " 二进制图像
 set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest " 已编译的对象文件
 set wildignore+=*.luac                           " Lua 字节码
 set wildignore+=*.DS_Store                       " OSX 糟糕物
+"-----------------powerful command complete end------------------------
 
 " 用空格键来开关折叠 默认不折叠
 set foldenable
@@ -191,7 +193,7 @@ let NERDSpaceDelims=1       " 让注释符与语句之间留一个空格
 let NERDCompactSexyComs=1   " 多行注释时样子更好看
 
 
-"-----------------LaTeX---------------------------------
+"------__________-----------LaTeX---------------------------------
 " REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
 filetype plugin on
 
@@ -211,6 +213,21 @@ filetype indent on
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
+"--------------------------LaTeX End-------------------------------------
+
+"-------------------------pathogen--------------------------------
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 Helptags
+"-----------------------pathogen end------------------------------
+
+"-----------------------powerline---------------------------------
+"let g:Powerline_symbols = 'fancy'
+"set fillchars+=stl: ,stlnc:
+"set nocompatible
+"set t_Co=256
+"let g:Powerline_cache_enabled = 1
+"let g:Powerline_cache_file='~/.vim/bundle/powerline/Powerline.cache'
+"set laststatus=2   " Always show the statusline 
+"-----------------------powerline end-----------------------------
+
