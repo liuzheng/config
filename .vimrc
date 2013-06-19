@@ -212,11 +212,6 @@ filetype indent on
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
-set nocompatible    " be iMproved
-set rtp+=~/.vim/bundle/vundle/
-
-call vundle#rc()
-Bundle 'gmarik/vundle'
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 Helptags

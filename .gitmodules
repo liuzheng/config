@@ -10,3 +10,12 @@
 [submodule ".vim/bundle/a.vim"]
 	path = .vim/bundle/a.vim
 	url = https://github.com/vim-scripts/a.vim.git
+[submodule ".vim/bundle/matrix.vim--Yang"]
+	path = .vim/bundle/matrix.vim--Yang
+	url = https://github.com/vim-scripts/matrix.vim--Yang.git
+[submodule ".vim/bundle/vim-latex-suite"]
+	path = .vim/bundle/vim-latex-suite
+	url = https://github.com/gerw/vim-latex-suite.git
+[submodule ".vim/bundle/powerline"]
+	path = .vim/bundle/powerline
+	url = https://github.com/Lokaltog/powerline.git
