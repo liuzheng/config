@@ -5,6 +5,7 @@ bind '"\e[B": history-search-forward'
 
 #===================alias=======================
 # ls
+alias ll='ls -l'
 alias la='ls -Al'
 alias ls='ls -hF --color'
 alias lx='ls -lXB'
@@ -28,6 +29,21 @@ alias dfh='df -h'
 # make
 alias mk="make"
 alias mki="make install"
+
+# clc
+alias clc="clear"
+alias lcl="clear"
+
+# cd
+alias c="cd"
+
+# git
+alias gitc='git clone'
+alias gpom='git push origin master'
+alias gitp='git pull'
+alias gita='git add'
+alias gitm='git commit'
+alias gits='git push'
 
 #===================alias end===================
 
@@ -87,6 +103,40 @@ function ii()
 
 # find file name
 function ff() { find . -type f -iname '*'$*'*' -ls ; }
+
+function gb2utf()
+{
+    iconv -f gb2312 -t utf-8 $1>$1+f && mv $1+f $1
+}
+
+# doubanFM need git github.com/hzqt/fmc.git & github.com/hzqt/fmd.git
+function doubanFM()
+{
+if ps -aux|grep 10098|grep -v grep 
+then
+ echo  
+else
+    /etc/init.d/fmd start &
+fi
+case $1 in
+    play|stop|pause|toggle|skip|ban|rate|unrate|info|channels|end)
+    fmc -a 127.0.0.1 -p 10098 $1
+    ;;
+    setch)
+    fmc -a 127.0.0.1 -p 10098 $1 $2
+    ;;
+    *)
+    if fmc -a 127.0.0.1 -p 10098|grep -i stop|grep -v grep
+    then
+        fmc -a 127.0.0.1 -p 10098 play
+    elif fmc -a 127.0.0.1 -p 10098|grep -i pause|grep -v grep;then
+        fmc -a 127.0.0.1 -p 10098 play
+    else
+        fmc -a 127.0.0.1 -p 10098 stop
+    fi
+    ;;
+esac
+}
 
 #==================function end=================
 
@@ -319,3 +369,4 @@ fi
 complete -o default -F _my_command nohup exec eval trace truss strace sotruss gdb
 complete -o default -F _my_command command type which man nice
 
+export EDITOR=/usr/bin/vim
