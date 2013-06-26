@@ -79,3 +79,6 @@
 [submodule ".vim/bundle/vim-matlab"]
 	path = .vim/bundle/vim-matlab
 	url = https://github.com/sgeb/vim-matlab.git
+[submodule ".vim/bundle/ShowFunc.vim--nianyang"]
+	path = .vim/bundle/ShowFunc.vim--nianyang
+	url = https://github.com/vim-scripts/ShowFunc.vim--nianyang.git
