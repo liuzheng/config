@@ -10,4 +10,4 @@ else
 fi
 git submodule init
 git submodule update
-$HOME/.bashrc
+. ~/.bashrc
