@@ -231,3 +231,17 @@ Helptags
 "set laststatus=2   " Always show the statusline 
 "-----------------------powerline end-----------------------------
 
+"------------------- The matlab Connection -----------------------
+nnoremap <F5> :call MatlabRun()<CR><CR>
+nnoremap <S-F6> :call RunMatlab()<CR><CR>
+
+function! MatlabRun()
+  execute "w"
+  execute "!matlab-ctrl.py \"". expand("%:r") . "\""
+endfunction
+
+function! RunMatlab()
+  execute "w"
+  call system("matlab-launch.sh \"" . expand("%:r") . "\"")
+endfunction
+"------------------- End matlab Connection -----------------------
