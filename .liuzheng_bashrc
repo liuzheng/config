@@ -132,7 +132,7 @@ function gb2utf()
     iconv -f gb2312 -t utf-8 $1>$1+f && mv $1+f $1
 }
 
-# doubanFM need git github.com/hzqt/fmc.git & github.com/hzqt/fmd.git
+# doubanFM need git github.com/hzqtc/fmc.git & github.com/hzqtc/fmd.git
 function doubanFM()
 {
 if ps -aux|grep 10098|grep -v grep 
