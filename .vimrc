@@ -213,6 +213,25 @@ filetype indent on
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
+" this is mostly a matter of taste. but LaTeX looks good with just a bit
+" of indentation.
+set sw=2
+" TIP: if you write your \label's as \label{fig:something}, then if you
+" type in \ref{fig: and press <C-n> you will automatically cycle through
+" all the figure labels. Very useful!
+set iskeyword+=:
+
+map <F8> :call RunTeX()<CR>
+func! RunTeX()
+    exec "w"
+    exec "!xelatex %"
+endfunc
+
+
+map <F9> :call Showpdf()<CR>
+func! Showpdf()
+    exec "!evince %:r.pdf &"
+endfunc
 "--------------------------LaTeX End-------------------------------------
 
 "-------------------------pathogen--------------------------------
