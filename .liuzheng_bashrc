@@ -135,7 +135,7 @@ function gb2utf()
 # doubanFM need git github.com/hzqtc/fmc.git & github.com/hzqtc/fmd.git
 function doubanFM()
 {
-if ps -aux|grep 10098|grep -v grep 
+if ps aux|grep 10098|grep -v grep 
 then
  echo  
 else

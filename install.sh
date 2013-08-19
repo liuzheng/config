@@ -4,7 +4,7 @@ ln -sf `pwd`/.vim $HOME/
 cp `pwd`/.bashrc $HOME/
 cp `pwd`/.bash_profile $HOME/
 cp 'pwd'/locale.gen /etc/
-locale-gen
+sudo locale-gen
 
 
 if (cat $HOME/.bashrc|grep "source $PWD/.liuzheng_bashrc")
