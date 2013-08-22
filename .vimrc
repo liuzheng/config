@@ -224,7 +224,7 @@ set iskeyword+=:
 map <F8> :call RunTeX()<CR>
 func! RunTeX()
     exec "w"
-    exec "!xelatex %"
+    exec "!xelatex %<"
 endfunc
 
 
