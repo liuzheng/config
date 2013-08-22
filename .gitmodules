@@ -82,3 +82,6 @@
 [submodule ".vim/bundle/ShowFunc.vim--nianyang"]
 	path = .vim/bundle/ShowFunc.vim--nianyang
 	url = https://github.com/vim-scripts/ShowFunc.vim--nianyang.git
+[submodule ".vim/bundle/Emmet.vim"]
+	path = .vim/bundle/Emmet.vim
+	url = https://github.com/vim-scripts/Emmet.vim.git
