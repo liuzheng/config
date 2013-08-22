@@ -137,7 +137,7 @@ function doubanFM()
 {
 if ps aux|grep fmd|grep -v grep 
 then
- 
+echo 
 else
     /etc/init.d/fmd start &
 fi
