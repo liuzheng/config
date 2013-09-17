@@ -85,3 +85,6 @@
 [submodule ".vim/bundle/Emmet.vim"]
 	path = .vim/bundle/Emmet.vim
 	url = https://github.com/vim-scripts/Emmet.vim.git
+[submodule ".vim/bundle/maven-ide"]
+	path = .vim/bundle/maven-ide
+	url = https://github.com/vim-scripts/maven-ide.git
