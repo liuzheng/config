@@ -25,4 +25,3 @@ INFOPATH=/usr/local/texlive/2012/texmf/doc/info:$INFOPATH; export INFOPATH
 JAVA_HOME=/opt/java
 PATH=$PATH:$JAVA_HOME/bin:$JAVA_HOME/jre/bin
 CLASSPATH=.:$JAVA_HOME/lib:$JAVA_HOME/jre/lib:$CLASSPATH
-source /root/config/.liuzheng_bashrc
