@@ -88,3 +88,6 @@
 [submodule ".vim/bundle/maven-ide"]
 	path = .vim/bundle/maven-ide
 	url = https://github.com/vim-scripts/maven-ide.git
+[submodule ".vim/bundle/javacomplete"]
+	path = .vim/bundle/javacomplete
+	url = https://github.com/vim-scripts/javacomplete.git
