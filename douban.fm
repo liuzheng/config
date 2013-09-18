@@ -1,0 +1,16 @@
+### need this lib:
+
+libcurl4-openssl-dev libjson0-dev libmpg123-dev libao-dev
+
+### git it
+
+git clone https://github.com/hzqtc/fmc.git
+
+git clone https://github.com/hzqtc/fmd.git
+
+### cd to file
+
+fmc just need "make && cp fmc /usr/local/bin/"
+
+fmd need change Makefile -ljson-c to -ljson , then " make release && cp fmd /usr/local/bin/"
+
