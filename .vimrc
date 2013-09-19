@@ -264,3 +264,9 @@ function! RunMatlab()
   call system("matlab-launch.sh \"" . expand("%:r") . "\"")
 endfunction
 "------------------- End matlab Connection -----------------------
+
+
+"------------------- JavaComplete --------------------------------
+setlocal omnifunc=javacomplete#Complete 
+"inoremap <buffer> <C-X><C-U> <C-X><C-U><C-P> 
+"inoremap <buffer> <C-S-Space> <C-X><C-U><C-P> 

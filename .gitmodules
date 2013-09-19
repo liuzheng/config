@@ -91,3 +91,27 @@
 [submodule ".vim/bundle/javacomplete"]
 	path = .vim/bundle/javacomplete
 	url = https://github.com/vim-scripts/javacomplete.git
+[submodule ".vim/bundle/The-NERD-Commenter"]
+	path = .vim/bundle/The-NERD-Commenter
+	url = https://github.com/vim-scripts/The-NERD-Commenter.git
+[submodule ".vim/bundle/JavaDecompiler.vim"]
+	path = .vim/bundle/JavaDecompiler.vim
+	url = https://github.com/vim-scripts/JavaDecompiler.vim.git
+[submodule ".vim/bundle/The-NERD-tree"]
+	path = .vim/bundle/The-NERD-tree
+	url = https://github.com/vim-scripts/The-NERD-tree.git
+[submodule ".vim/bundle/indentjava.vim"]
+	path = .vim/bundle/indentjava.vim
+	url = https://github.com/vim-scripts/indentjava.vim.git
+[submodule ".vim/bundle/minibufexpl.vim"]
+	path = .vim/bundle/minibufexpl.vim
+	url = https://github.com/vim-scripts/minibufexpl.vim.git
+[submodule ".vim/bundle/mru.vim"]
+	path = .vim/bundle/mru.vim
+	url = https://github.com/vim-scripts/mru.vim.git
+[submodule ".vim/bundle/tex_autoclose.vim"]
+	path = .vim/bundle/tex_autoclose.vim
+	url = https://github.com/vim-scripts/tex_autoclose.vim.git
+[submodule ".vim/bundle/vim-easymotion"]
+	path = .vim/bundle/vim-easymotion
+	url = https://github.com/Lokaltog/vim-easymotion.git
