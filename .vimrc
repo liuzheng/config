@@ -1,4 +1,7 @@
 "http://xineohpanihc.iteye.com/blog/1146946
+"--------------------------------------------------------------
+"General
+"--------------------------------------------------------------
 set cursorline		"突出显示当前行
 set number			"显示行号
 set expandtab		"插入tab符号以空格替换
@@ -7,13 +10,13 @@ set tabstop=4		"设定tab长度
 set smartindent		"开启新行时时哟功能智能自动缩进
 set smarttab		"开启新行时使用智能tab缩进
 set shiftwidth=4	"设定<<和>>命令移动时的宽度为4
-set showmatch		"插入括号时，短暂地跳转到匹配第对应括号
 set backspace=indent,eol,start	"不设定载插入状态无法用退格键和Delete键删除回车符
 set guioptions=t	"隐藏菜单栏、工具栏、滚动条
 set ruler			"打开状态栏标尺
 set incsearch		"输入搜索内容时就显示搜索结果
 set hlsearch		"搜索时高亮显示被找到的文本
 set ignorecase		"搜索时忽略大小写
+set smartcase       " 有一个或以上大写字母时仍大小写敏感 
 set enc=utf8	"文件默认编码
 set fileencodings=utf-8,ucs-bom,cp936,gb2312,gbk,gb18030,big5,euc-jp,euc-kr,latin1 "检测编码顺序
 set showmatch		"高亮匹配的括号
@@ -23,15 +26,30 @@ set listchars=tab:\|\ ,trail:.,extends:>,precedes:<,eol:$	"输入:set list命令
 set completeopt+=longest    " 让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
 set shortmess=atI	" 启动的时候不显示那个援助索马里儿童的提示
 colorscheme desert	"配色方案
+syntax enable       " 开启语法高亮
 syntax on			"自动语法高亮
-filetype off
-"filetype plugin indent on
-"filetype indent on
+filetype on         " 检测文件类型
+filetype indent on " 针对不同的文件类型采用不同的缩进格式
+filetype plugin indent on " 启动自动补全
+filetype indent on    " 允许插件
 set ambiwidth=double    " 中文引号显示
 set showcmd         " 显示输入的命令
 behave mswin		" 鼠标使用微软习惯，支持右键菜单
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif "离开插入模式后自动关闭预览窗口
-set mouse=a
+set mouse=a         " 启用鼠标 
+set history=1000    " history存储长度
+set paste           " 粘贴时保持格式
+set nocompatible    " 非兼容vi模式。去掉讨厌的有关vi一致性模式，避免以前版本的一些bug和局限
+set autoread        " 文件修改之后自动载入
+"set nobackup       " 取消自动备份
+"set nowb           " 取消自动备份
+"set noswapcile     " 取消自动备份
+set ai              "Auto indent
+set si              "Smart indent
+set formatoptions+=m " 如遇Unicode值大于255的文本，不必等到空格再折行
+set formatoptions+=B " 合并两行中文时，不在中间加空格
+
+
 
 "Format the statusline
 "Nice statusbar
@@ -81,6 +99,9 @@ autocmd FileType ruby set omnifunc=rubycomplete#Completeruby
 autocmd FileType sql set omnifunc=sqlcomplete#Completesql
 autocmd FileType matlab     :source ~/config/setup/matlab.vim     "Matlab mode"     <CR>
 au BufNewFile,BufRead *.py,*.pyw setf python
+"-----------------------------------------------------------------
+" 自动载入样例文件
+"-----------------------------------------------------------------
 autocmd BufNewFile *.m      0r ~/config/simple/simple.m
 autocmd BufNewFile *.py     0r ~/config/simple/simple.py
 autocmd BufNewFile *.tex    0r ~/config/simple/simple.tex
