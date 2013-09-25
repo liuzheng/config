@@ -38,7 +38,7 @@ behave mswin		" 鼠标使用微软习惯，支持右键菜单
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif "离开插入模式后自动关闭预览窗口
 set mouse=a         " 启用鼠标 
 set history=1000    " history存储长度
-set paste           " 粘贴时保持格式
+"set paste           " 粘贴时保持格式
 set nocompatible    " 非兼容vi模式。去掉讨厌的有关vi一致性模式，避免以前版本的一些bug和局限
 set autoread        " 文件修改之后自动载入
 "set nobackup       " 取消自动备份
@@ -138,6 +138,42 @@ inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
 inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" :"\<PageDown>"
 inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" :"\<PageUp>"
 
+
+" 括号及引号自动补全
+inoremap ) (  )<Esc>hi
+inoremap ( ()<Esc>i
+inoremap { {}<Esc>i
+inoremap } {<Esc>o}<Esc>i
+inoremap [ []<Esc>i
+inoremap ] []<Esc>i
+inoremap < <><Esc>i
+inoremap > <><Esc>i
+inoremap " ""<Esc>i
+inoremap ' ''<Esc>i
+
+"<C-A>全选，<C-C>复制，<C-X>剪切
+map <C-c> y
+map <C-X> d
+map <C-A> <Esc>ggVG
+
+cmap Q q!<CR>
+
+" omnicomplete configure 
+set completeopt=menu,longest"
+
+" clang_complete
+let g:clang_complete_copen=1
+let g:clang_periodic_quickfix=1
+let g:clang_snippets=1
+let g:clang_close_preview=1
+let g:clang_use_library=1
+let g:clang_user_options='-stdlib=libc++ -std=c++11 -IIncludePath'
+let g:neocomplcache_enable_at_startup = 1
+
+""calendar
+let g:calendar_diary=~/diary
+map ca :Calendar<CR>
+
 "-----------------------------------------------------------------
 " TagList
 "-----------------------------------------------------------------
@@ -151,13 +187,13 @@ let Tlist_Exit_OnlyWindow=1
 "-----------------------------------------------------------------
 " F2 工具栏和菜单栏交替切换
 "-----------------------------------------------------------------
-map <silent> <F2> :if &guioptions =~# 'T' <Bar>
-\set guioptions-=T <Bar>
-\set guioptions-=m <bar>
-\else <Bar>
-\set guioptions+=T <Bar>
-\set guioptions+=m <Bar>
-\endif<CR>
+"map <silent> <F2> :if &guioptions =~# 'T' <Bar>
+"\set guioptions-=T <Bar>
+"\set guioptions-=m <bar>
+"\else <Bar>
+"\set guioptions+=T <Bar>
+"\set guioptions+=m <Bar>
+"\endif<CR>
 
 "-----------------------------------------------------------------
 " plugin - NERD_tree.vim 以树状方式浏览系统中的文件和目录
@@ -171,6 +207,7 @@ map <silent> <F2> :if &guioptions =~# 'T' <Bar>
 "-----------------------------------------------------------------
 " F3 NERDTree 切换
 "-----------------------------------------------------------------
+map <F2> :NERDTreeMirror<CR>
 map <F3> :NERDTreeToggle<CR>
 imap <F3> <ESC>:NERDTreeToggle<CR>
 
@@ -186,9 +223,9 @@ map <F6> :e .<CR>
 
 
 "-----------------------------------------------------------------
-"F8 智能补全
+"Ctrl+Q 智能补全
 "-----------------------------------------------------------------
-inoremap <F8> <C-x><C-o>
+inoremap <C-q> <C-x><C-o>
 "
 "
 "-----------------------------------------------------------------
@@ -199,8 +236,8 @@ map <C-F9> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 " plugin - zencoding.vim 快速生成 HTML代码
 " CTRL+E 展开 zencoding 代码片段
 "-----------------------------------------------------------------
-let g:user_zen_expandabbr_key = '<c-e>'
-let g:use_zen_complete_tag = 1
+"let g:user_zen_expandabbr_key = '<c-e>'
+"let g:use_zen_complete_tag = 1
 
 "-----------------------------------------------------------------
 " plugin - NERD_commenter.vim 注释代码用的
@@ -272,22 +309,32 @@ Helptags
 "-----------------------powerline end-----------------------------
 
 "------------------- The matlab Connection -----------------------
-nnoremap <F5> :call MatlabRun()<CR><CR>
-nnoremap <S-F6> :call RunMatlab()<CR><CR>
+"nnoremap <F5> :call MatlabRun()<CR><CR>
+"nnoremap <S-F6> :call RunMatlab()<CR><CR>
 
-function! MatlabRun()
-  execute "w"
-  execute "!matlab-ctrl.py \"". expand("%:r") . "\""
-endfunction
+"function! MatlabRun()
+"  execute "w"
+"  execute "!matlab-ctrl.py \"". expand("%:r") . "\""
+"endfunction
 
-function! RunMatlab()
-  execute "w"
-  call system("matlab-launch.sh \"" . expand("%:r") . "\"")
-endfunction
+"function! RunMatlab()
+"  execute "w"
+"  call system("matlab-launch.sh \"" . expand("%:r") . "\"")
+"endfunction
 "------------------- End matlab Connection -----------------------
 
 
 "------------------- JavaComplete --------------------------------
 setlocal omnifunc=javacomplete#Complete 
-"inoremap <buffer> <C-X><C-U> <C-X><C-U><C-P> 
-"inoremap <buffer> <C-S-Space> <C-X><C-U><C-P> 
+autocmd Filetype java set omnifunc=javacomplete#Conplete
+"autocmd Filetype java set completefunc=javacomplete#CompleteParamsInf
+inoremap <buffer> <C-X><C-U> <C-X><C-U><C-P> 
+inoremap <buffer> <C-S-Space> <C-X><C-U><C-P> 
+autocmd Filetype java,javascript,jsp inoremap .  .<C-X><C-O>
+
+"-----------------JavaBrowser------------------------------------
+let JavaBrowser_Ctags_Cmd = '/usr/bin/ctags'
+let JavaBrowser_Inc_Winwidth = 0
+map <F12> :JavaBrowser<CR>
+imap <F12> <ESC><F12>
+

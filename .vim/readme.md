@@ -308,3 +308,12 @@ map ca :Calendar<cr>
 
 关于此插件的更多功能和各种说明, 请查看帮助手册, help csupport.
 
+### Engspchk
+
+快捷键：“\ec”开始拼写检查，“\ee”结束拼写检查，“\ea” 选择替换拼写
+
+### JavaBrowser
+
+编辑类文件时, 类资源树是个有用的东西, 可以把类的成员, 方法等等很直观的显示出来. 在 vim 中也可以实现好像 vc, jbuilder 那样的类资源树, 当然比那些会简单些, 不过也够好用的了. 就是用 javabrowser.vim 这个脚本实现的.
+
+### JavaDecompiler.vim

@@ -1,0 +1,79 @@
+### Auto-Pair
+
+1.补全对称的 {, [, ', "等符号
+
+2.自动补空格，当输入{时，你会得到{|},这样的符号
+
+3.中间的|代表光标所在位置(下同,|都代表光标所在位置，不再提醒).然后按空格的时候，会自动在光标两边各加入一个空格，结果就是{ | },而不是{ |}.
+
+3.自动插入新行，输入{|}时，按回车，会自动插入新行，结果会是这样
+
+{
+
+|
+
+}
+
+新行是带正确缩进的。
+
+4.输入时跳过',},]等符号，例如:
+
+在{ | }这种情况下，你输入}的时候，会跳过后面的那个},而不是输入多一个}
+
+5.定位},],例如在
+
+{
+
+|
+
+}
+
+或者 [ | ]这种情况下,输入}或],会跳到匹配的}或]符号后面。
+
+6.快速包装一个单词，如果你已经输入了一个单词word，现在想在外面加入一层括号,就可以在word前先输入一个括号,结果是这样(|)word,然后按alt+e,那么结果就是(word).
+
+### a.vim
+
+A few of quick commands to swtich between source files and header files quickly. 
+
+:A switches to the header file corresponding to the current file being edited (or vise versa) 
+
+:AS splits and switches 
+
+:AV vertical splits and switches 
+
+:AT new tab and switches 
+
+:AN cycles through matches 
+
+:IH switches to file under cursor 
+
+:IHS splits and switches 
+
+:IHV vertical splits and switches 
+
+:IHT new tab and switches 
+
+:IHN cycles through matches 
+
+<Leader>ih switches to file under cursor 
+
+<Leader>is switches to the alternate file of file under cursor (e.g. on  <foo.h> switches to foo.cpp) 
+
+<Leader>ihn cycles through matches 
+
+### A few of quick commands to swtich between source files and header files quickly. 
+
+:A switches to the header file corresponding to the current file being edited (or vise versa) 
+:AS splits and switches 
+:AV vertical splits and switches 
+:AT new tab and switches 
+:AN cycles through matches 
+:IH switches to file under cursor 
+:IHS splits and switches 
+:IHV vertical splits and switches 
+:IHT new tab and switches 
+:IHN cycles through matches 
+<Leader>ih switches to file under cursor 
+<Leader>is switches to the alternate file of file under cursor (e.g. on  <foo.h> switches to foo.cpp) 
+<Leader>ihn cycles through matches 
