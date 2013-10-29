@@ -171,7 +171,7 @@ let g:clang_user_options='-stdlib=libc++ -std=c++11 -IIncludePath'
 let g:neocomplcache_enable_at_startup = 1
 
 ""calendar
-let g:calendar_diary=~/diary
+let g:calendar_diary="~/diary"
 map ca :Calendar<CR>
 
 "-----------------------------------------------------------------
