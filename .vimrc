@@ -143,11 +143,11 @@ inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" :"\<PageUp>"
 inoremap ) (  )<Esc>hi
 inoremap ( ()<Esc>i
 inoremap { {}<Esc>i
-inoremap } {<Esc>o}<Esc>i
+inoremap } {<ESC>o}<ESC>i
 inoremap [ []<Esc>i
 inoremap ] []<Esc>i
 inoremap < <><Esc>i
-inoremap > <><Esc>i
+inoremap > </><Esc>i
 inoremap " ""<Esc>i
 inoremap ' ''<Esc>i
 
