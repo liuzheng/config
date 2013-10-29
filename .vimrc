@@ -48,7 +48,9 @@ set ai              "Auto indent
 set si              "Smart indent
 set formatoptions+=m " 如遇Unicode值大于255的文本，不必等到空格再折行
 set formatoptions+=B " 合并两行中文时，不在中间加空格
-
+"这个是我喜欢的，一旦一行的字符超出80个的话就把那些字符的背景设为红色
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
 
 
 "Format the statusline
