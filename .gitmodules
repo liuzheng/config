@@ -127,3 +127,12 @@
 [submodule ".vim/bundle/vundle"]
 	path = .vim/bundle/vundle
 	url = https://github.com/gmarik/vundle.git
+[submodule ".vim/bundle/Pydiction"]
+	path = .vim/bundle/Pydiction
+	url = https://github.com/vim-scripts/Pydiction.git
+[submodule ".vim/bundle/python_fold"]
+	path = .vim/bundle/python_fold
+	url = https://github.com/mcapell/python_fold.git
+[submodule ".vim/bundle/vim-autocomplpop"]
+	path = .vim/bundle/vim-autocomplpop
+	url = https://github.com/othree/vim-autocomplpop.git
