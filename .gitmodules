@@ -145,3 +145,6 @@
 [submodule ".vim/bundle/pythoncomplete.vim"]
 	path = .vim/bundle/pythoncomplete.vim
 	url = https://github.com/mjbrownie/pythoncomplete.vim.git
+[submodule ".vim/bundle/solarized"]
+	path = .vim/bundle/solarized
+	url = git://github.com/altercation/solarized.git

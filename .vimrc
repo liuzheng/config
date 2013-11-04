@@ -23,9 +23,9 @@ set showmatch		"高亮匹配的括号
 set matchtime=5		"匹配括号高亮的时间（单位时十分之一秒）
 set softtabstop=4
 set listchars=tab:\|\ ,trail:.,extends:>,precedes:<,eol:$	"输入:set list命令是应该显示些啥？
-set completeopt+=longest    " 让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
+"set completeopt+=longest    " 让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
 set shortmess=atI	" 启动的时候不显示那个援助索马里儿童的提示
-colorscheme desert	"配色方案
+"colorscheme desert	"配色方案
 syntax enable       " 开启语法高亮
 syntax on			"自动语法高亮
 filetype on         " 检测文件类型
@@ -51,6 +51,7 @@ set formatoptions+=B " 合并两行中文时，不在中间加空格
 "这个是我喜欢的，一旦一行的字符超出80个的话就把那些字符的背景设为红色
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
+set guifont=Monaco:h15
 
 
 "Format the statusline
@@ -77,12 +78,19 @@ set statusline+=%-14.(%l,%c%V%)\ %<%P " offset
 "--------------------------------------------------------------
 " 配色
 "--------------------------------------------------------------
-hi User1 ctermfg=black  ctermbg=white " guifg=black guimbg=white
-hi User2 ctermfg=red    "ctermbg=white " guifg=red   guimbg=white
-hi User3 ctermfg=green  "ctermbg=white " guifg=green guimbg=white
-hi User4 ctermfg=red    ctermbg=green " guifg=red   guimbg=green
-hi User5 ctermfg=red    ctermbg=green " guifg=red   guimbg=green
+"hi User1 ctermfg=black  ctermbg=white " guifg=black guimbg=white
+"hi User2 ctermfg=red    "ctermbg=white " guifg=red   guimbg=white
+"hi User3 ctermfg=green  "ctermbg=white " guifg=green guimbg=white
+"hi User4 ctermfg=red    ctermbg=green " guifg=red   guimbg=green
+"hi User5 ctermfg=red    ctermbg=green " guifg=red   guimbg=green
 "hi User5 guifg=#002600  guibg=#67ab6e   gui=italic
+
+if has('gui_running')
+  set background=light
+else
+  set background=dark
+endif
+colorscheme solarized
 
 
 "-----------------------------------------------------------------
@@ -164,7 +172,7 @@ map <C-A> <Esc>ggVG
 cmap Q q!<CR>
 
 " omnicomplete configure 
-set completeopt=menu,longest"
+set completeopt=menu,longest,preview
 
 " clang_complete
 let g:clang_complete_copen=1
