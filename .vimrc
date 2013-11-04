@@ -101,6 +101,9 @@ autocmd FileType ruby set omnifunc=rubycomplete#Completeruby
 autocmd FileType sql set omnifunc=sqlcomplete#Completesql
 autocmd FileType matlab     :source ~/config/setup/matlab.vim     "Matlab mode"     <CR>
 au BufNewFile,BufRead *.py,*.pyw setf python
+set ofu=syntaxcomplete#Complete
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType python runtime! config/.vim/bundle/pythoncomplete.vim/autoload/pythoncomplete.vim
 "-----------------------------------------------------------------
 " 自动载入样例文件
 "-----------------------------------------------------------------

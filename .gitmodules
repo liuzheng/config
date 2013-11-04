@@ -142,3 +142,6 @@
 [submodule ".vim/bundle/Vim-R-plugin"]
 	path = .vim/bundle/Vim-R-plugin
 	url = https://github.com/vim-scripts/Vim-R-plugin.git
+[submodule ".vim/bundle/pythoncomplete.vim"]
+	path = .vim/bundle/pythoncomplete.vim
+	url = https://github.com/mjbrownie/pythoncomplete.vim.git
