@@ -7,7 +7,7 @@ set number			"显示行号
 set expandtab		"插入tab符号以空格替换
 set autoindent		"开启自动缩进
 set tabstop=4		"设定tab长度
-set smartindent		"开启新行时时哟功能智能自动缩进
+set smartindent		"开启新行时使用智能自动缩进
 set smarttab		"开启新行时使用智能tab缩进
 set shiftwidth=4	"设定<<和>>命令移动时的宽度为4
 set backspace=indent,eol,start	"不设定载插入状态无法用退格键和Delete键删除回车符
@@ -108,9 +108,8 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType ruby set omnifunc=rubycomplete#Completeruby
 autocmd FileType sql set omnifunc=sqlcomplete#Completesql
 autocmd FileType matlab     :source ~/config/setup/matlab.vim     "Matlab mode"     <CR>
-au BufNewFile,BufRead *.py,*.pyw setf python
+"au BufNewFile,BufRead *.py,*.pyw setf python
 set ofu=syntaxcomplete#Complete
-autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType python runtime! config/.vim/bundle/pythoncomplete.vim/autoload/pythoncomplete.vim
 "-----------------------------------------------------------------
 " 自动载入样例文件

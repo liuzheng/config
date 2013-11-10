@@ -148,9 +148,6 @@
 [submodule ".vim/bundle/solarized"]
 	path = .vim/bundle/solarized
 	url = git://github.com/altercation/solarized.git
-[submodule ".vim/bundle/http:/github.com/davidhalter/jedi-vim"]
-	path = .vim/bundle/http:/github.com/davidhalter/jedi-vim
-	url = http://github.com/davidhalter/jedi-vim
 [submodule ".vim/bundle/jedi-vim"]
 	path = .vim/bundle/jedi-vim
 	url = https://github.com/davidhalter/jedi-vim.git
