@@ -160,3 +160,6 @@
 [submodule "Pydiction"]
 	path = Pydiction
 	url = https://github.com/vim-scripts/Pydiction.git
+[submodule ".vim/bundle/ack.vim"]
+	path = .vim/bundle/ack.vim
+	url = https://github.com/mileszs/ack.vim.git
