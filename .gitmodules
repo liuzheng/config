@@ -163,3 +163,6 @@
 [submodule ".vim/bundle/ack.vim"]
 	path = .vim/bundle/ack.vim
 	url = https://github.com/mileszs/ack.vim.git
+[submodule ".vim/bundle/AutoComplPop"]
+	path = .vim/bundle/AutoComplPop
+	url = https://github.com/vim-scripts/AutoComplPop.git
