@@ -157,3 +157,6 @@
 [submodule ".vim/bundle/snippetsEmu"]
 	path = .vim/bundle/snippetsEmu
 	url = https://github.com/vim-scripts/snippetsEmu.git
+[submodule "Pydiction"]
+	path = Pydiction
+	url = https://github.com/vim-scripts/Pydiction.git

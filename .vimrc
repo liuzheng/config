@@ -29,8 +29,8 @@ set shortmess=atI	" 启动的时候不显示那个援助索马里儿童的提示
 syntax enable       " 开启语法高亮
 syntax on			"自动语法高亮
 filetype on         " 检测文件类型
-"filetype indent on " 针对不同的文件类型采用不同的缩进格式
-"filetype plugin indent on " 启动自动补全
+filetype indent on    " 允许插件
+filetype plugin indent on " 启动自动补全
 set ambiwidth=double    " 中文引号显示
 set showcmd         " 显示输入的命令
 behave mswin		" 鼠标使用微软习惯，支持右键菜单
@@ -271,7 +271,7 @@ let NERDSpaceDelims=1       " 让注释符与语句之间留一个空格
 let NERDCompactSexyComs=1   " 多行注释时样子更好看
 
 
-"------__________-----------LaTeX---------------------------------
+"---------------------------LaTeX---------------------------------
 " REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
 filetype plugin on
 
@@ -318,7 +318,6 @@ call pathogen#infect()
 Helptags
 "-----------------------pathogen end------------------------------
 
-filetype indent on    " 允许插件
 "-----------------------powerline---------------------------------
 "let g:Powerline_symbols = 'fancy'
 "set fillchars+=stl: ,stlnc:
@@ -360,5 +359,7 @@ map <F12> :JavaBrowser<CR>
 imap <F12> <ESC><F12>
 
 "-----------------Python-----------------------------------------
-"let g:pydiction_location='~/.vim/bundle/Pydiction/complete-dict'
+let g:pydiction_location='/home/liuzheng/.vim/bundle/Pydiction/complete-dict'
+"let g:pydiction_menu_height = 20
+
 
