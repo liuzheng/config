@@ -175,3 +175,9 @@
 [submodule ".vim/bundle/gundo.vim"]
 	path = .vim/bundle/gundo.vim
 	url = https://github.com/sjl/gundo.vim.git
+[submodule ".vim/bundle/vim-makegreen"]
+	path = .vim/bundle/vim-makegreen
+	url = https://github.com/reinh/vim-makegreen.git
+[submodule ".vim/bundle/vim-markdown"]
+	path = .vim/bundle/vim-markdown
+	url = https://github.com/plasticboy/vim-markdown.git
