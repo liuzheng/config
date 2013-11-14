@@ -29,9 +29,8 @@ set shortmess=atI	" 启动的时候不显示那个援助索马里儿童的提示
 syntax enable       " 开启语法高亮
 syntax on			"自动语法高亮
 filetype on         " 检测文件类型
-filetype indent on " 针对不同的文件类型采用不同的缩进格式
-filetype plugin indent on " 启动自动补全
-filetype indent on    " 允许插件
+"filetype indent on " 针对不同的文件类型采用不同的缩进格式
+"filetype plugin indent on " 启动自动补全
 set ambiwidth=double    " 中文引号显示
 set showcmd         " 显示输入的命令
 behave mswin		" 鼠标使用微软习惯，支持右键菜单
@@ -100,7 +99,6 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType cl set omnifunc=ccomplete#Complete
 autocmd FileType cu set omnifunc=ccomplete#Complete
@@ -108,9 +106,10 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType ruby set omnifunc=rubycomplete#Completeruby
 autocmd FileType sql set omnifunc=sqlcomplete#Completesql
 autocmd FileType matlab     :source ~/config/setup/matlab.vim     "Matlab mode"     <CR>
+autocmd FileType python set omnifunc=pythoncomplete#Complete
 "au BufNewFile,BufRead *.py,*.pyw setf python
 set ofu=syntaxcomplete#Complete
-autocmd FileType python runtime! config/.vim/bundle/pythoncomplete.vim/autoload/pythoncomplete.vim
+autocmd FileType python runtime! $HOME/.vim/bundle/pythoncomplete.vim/autoload/pythoncomplete.vim
 "-----------------------------------------------------------------
 " 自动载入样例文件
 "-----------------------------------------------------------------
@@ -319,6 +318,7 @@ call pathogen#infect()
 Helptags
 "-----------------------pathogen end------------------------------
 
+filetype indent on    " 允许插件
 "-----------------------powerline---------------------------------
 "let g:Powerline_symbols = 'fancy'
 "set fillchars+=stl: ,stlnc:
@@ -360,4 +360,5 @@ map <F12> :JavaBrowser<CR>
 imap <F12> <ESC><F12>
 
 "-----------------Python-----------------------------------------
-let g:pydiction_location='~/.vim/bundle/Pydiction/complete-dict'
+"let g:pydiction_location='~/.vim/bundle/Pydiction/complete-dict'
+
