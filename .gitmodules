@@ -181,3 +181,6 @@
 [submodule ".vim/bundle/vim-markdown"]
 	path = .vim/bundle/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown.git
+[submodule ".vim/bundle/pep8"]
+	path = .vim/bundle/pep8
+	url = https://github.com/vim-scripts/pep8.git
