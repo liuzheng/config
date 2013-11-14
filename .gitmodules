@@ -151,3 +151,9 @@
 [submodule ".vim/bundle/jedi-vim"]
 	path = .vim/bundle/jedi-vim
 	url = https://github.com/davidhalter/jedi-vim.git
+[submodule ".vim/bundle/python_fn.vim"]
+	path = .vim/bundle/python_fn.vim
+	url = https://github.com/Crapworks/python_fn.vim.git
+[submodule ".vim/bundle/snippetsEmu"]
+	path = .vim/bundle/snippetsEmu
+	url = https://github.com/vim-scripts/snippetsEmu.git
