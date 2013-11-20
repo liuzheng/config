@@ -357,5 +357,8 @@ imap <F12> <ESC><F12>
 "-----------------Python-----------------------------------------
 let g:pydiction_location='/home/liuzheng/.vim/bundle/Pydiction/complete-dict'
 "let g:pydiction_menu_height = 20
+autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=79
 
+"-----------------Jedi-------------------------------------------
+"let g:jedi#use_tabs_not_buffers = 0
 
