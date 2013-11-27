@@ -362,3 +362,11 @@ autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=
 "-----------------Jedi-------------------------------------------
 "let g:jedi#use_tabs_not_buffers = 0
 
+"-----------------vim-tmux---------------------------------------
+let g:tmux_navigator_no_mappings = 1
+
+nnoremap <silent> {Left-mapping} :TmuxNavigateLeft<cr>
+nnoremap <silent> {Down-Mapping} :TmuxNavigateDown<cr>
+nnoremap <silent> {Up-Mapping} :TmuxNavigateUp<cr>
+nnoremap <silent> {Right-Mapping} :TmuxNavigateRight<cr>
+nnoremap <silent> {Previoust-Mapping} :TmuxNavigatePrevious<cr>
