@@ -139,7 +139,7 @@ if ps aux|grep fmd|grep -v grep
 then
 echo 
 else
-    /etc/init.d/fmd start &
+    /usr/local/bin/fmd start &
 fi
 case $1 in
     play|stop|pause|toggle|skip|ban|rate|unrate|info|channels|end)
