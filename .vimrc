@@ -114,6 +114,7 @@ autocmd BufNewFile *.py     0r ~/config/simple/simple.py
 autocmd BufNewFile *.tex    0r ~/config/simple/simple.tex
 autocmd BufNewFile *.cl    0r ~/config/simple/simple.cl
 autocmd BufNewFile *.cu    0r ~/config/simple/simple.cu
+autocmd BufNewFile *.sh    0r ~/config/simple/simple.sh
 
 au GUIEnter * simalt ~x
 
