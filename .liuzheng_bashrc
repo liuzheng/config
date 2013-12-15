@@ -127,6 +127,25 @@ function ii()
 # find file name
 function ff() { find . -type f -iname '*'$*'*' -ls ; }
 
+# find file name
+function ff() { find . -type f -iname '*'$*'*' -ls ;  }
+
+function psshc(){
+      pssh -h /root/liuzheng/server.list -l root -P $1
+
+}
+
+function psshp(){
+      pscp -h /root/liuzheng/server.list -l root $1 $2
+
+}
+
+function psshg(){
+      prsync -r -h /root/liuzheng/server.list -l $1 $2
+
+}
+
+
 function gb2utf()
 {
     iconv -f gb2312 -t utf-8 $1>$1+f && mv $1+f $1
