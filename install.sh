@@ -14,3 +14,4 @@ fi
 git submodule init
 git submodule update
 . ~/.bashrc
+sudo apt-get install ctags tmux
