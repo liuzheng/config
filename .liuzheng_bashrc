@@ -127,9 +127,6 @@ function ii()
 # find file name
 function ff() { find . -type f -iname '*'$*'*' -ls ; }
 
-# find file name
-function ff() { find . -type f -iname '*'$*'*' -ls ;  }
-
 function psshc(){
       pssh -h /root/liuzheng/server.list -l root -P $1
 
