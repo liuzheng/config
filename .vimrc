@@ -85,7 +85,7 @@ set statusline+=%-14.(%l,%c%V%)\ %<%P " offset
 "hi User5 guifg=#002600  guibg=#67ab6e   gui=italic
 
 if has('gui_running')
-  set background=light
+  set background=dark 
 else
   set background=dark
 endif

@@ -34,9 +34,6 @@
 [submodule ".vim/bundle/c.vim"]
 	path = .vim/bundle/c.vim
 	url = https://github.com/vim-scripts/c.vim.git
-[submodule ".vim/bundle/clang_complete"]
-	path = .vim/bundle/clang_complete
-	url = https://github.com/Rip-Rip/clang_complete.git
 [submodule ".vim/bundle/eclim"]
 	path = .vim/bundle/eclim
 	url = https://github.com/ervandew/eclim.git

@@ -15,3 +15,6 @@ git submodule init
 git submodule update
 . ~/.bashrc
 sudo apt-get install ctags tmux
+cd `pwd`/.vim/bundle/YouCompleteMe
+git submodule --init --rescurive
+./install.sh --clang-completer

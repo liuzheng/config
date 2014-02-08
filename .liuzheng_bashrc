@@ -180,6 +180,17 @@ case $1 in
 esac
 }
 
+# swap
+function addswap()
+{
+  swapoff /home/swap
+  dd if=/dev/zero of=/home/swap bs=1024 count=$1
+  mkswap /home/swap
+  swapon /home/swap
+
+}
+
+
 #==================function end=================
 
 #=================complete======================
