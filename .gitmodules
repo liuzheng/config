@@ -205,7 +205,3 @@
 [submodule ".diary"]
 	path = .diary
 	url = git@bitbucket.org:liuzheng712/.diary.git
-[submodule "fmd"]
-	path = fmd
-	url = https://github.com/hzqtc/fmd.git
-	branch = master
