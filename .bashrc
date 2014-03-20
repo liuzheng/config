@@ -67,16 +67,22 @@ if [ -x /usr/lib/command-not-found -o -x /usr/share/command-not-found/command-no
 	}
 fi
 source ~/config/.liuzheng_bashrc
-alias matlab='/usr/local/MATLAB/R2012a/bin/matlab'
+alias matlab='/opt/MATLAB/R2012a/bin/matlab'
 alias goagent='python /opt/goagent/local/proxy.py'
 PATH=/usr/local/texlive/2012/bin/i386-linux:$PATH; export PATH
 MANPATH=/usr/local/texlive/2012/texmf/doc/man:$MANPATH; export MANPATH
 INFOPATH=/usr/local/texlive/2012/texmf/doc/info:$INFOPATH; export INFOPATH
 JAVA_HOME=/opt/java
-PATH=$PATH:$JAVA_HOME/bin:$JAVA_HOME/jre/bin
+PATH=$PATH:$JAVA_HOME/bin:$JAVA_HOME/jre/bin:/home/liuzheng/python/bypy
 CLASSPATH=.:$JAVA_HOME/lib:$JAVA_HOME/jre/lib:$CLASSPATH
 M2_HOME=/opt/maven
 M2=$M2_HOME/bin
 MAVEN_OPTS="-Xms256m -Xmx512m"
 PATH=$M2:$PATH
 
+[[ -s "$HOME/.rvm/scripts/rvm"  ]] && . "$HOME/.rvm/scripts/rvm"
+
+#Enabling tab-completion
+complete -cf sudo
+complete -cf man
+alias sublime='/opt/sublime/sublime_text'

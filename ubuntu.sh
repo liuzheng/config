@@ -4,8 +4,8 @@
 # Gmail:liuzheng712
 #
 
-sudo mv /etc/apt/sources.list /etc/apt/sources.list.bak 
-sudo cp sources.list /etc/apt/sources.list 
+#sudo mv /etc/apt/sources.list /etc/apt/sources.list.bak 
+#sudo cp sources.list /etc/apt/sources.list 
 sudo add-apt-repository ppa:gnome3-team/gnome3
 sudo apt-get update
 sudo apt-get dist-upgrade

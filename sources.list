@@ -1,0 +1,10 @@
+deb http://debian.ustc.edu.cn/ubuntu/ raring main restricted universe multiverse
+deb http://debian.ustc.edu.cn/ubuntu/ raring-backports restricted universe multiverse
+deb http://debian.ustc.edu.cn/ubuntu/ raring-proposed main restricted universe multiverse
+deb http://debian.ustc.edu.cn/ubuntu/ raring-security main restricted universe multiverse
+deb http://debian.ustc.edu.cn/ubuntu/ raring-updates main restricted universe multiverse
+deb-src http://debian.ustc.edu.cn/ubuntu/ raring main restricted universe multiverse
+deb-src http://debian.ustc.edu.cn/ubuntu/ raring-backports main restricted universe multiverse
+deb-src http://debian.ustc.edu.cn/ubuntu/ raring-proposed main restricted universe multiverse
+deb-src http://debian.ustc.edu.cn/ubuntu/ raring-security main restricted universe multiverse
+deb-src http://debian.ustc.edu.cn/ubuntu/ raring-updates main restricted universe multiverse

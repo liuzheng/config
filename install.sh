@@ -3,7 +3,7 @@ ln -s `pwd`/.vimrc $HOME/
 ln -s `pwd`/.vim $HOME/
 sudo cp `pwd`/locale.gen /etc/
 sudo locale-gen
-mkdir ~/diary
+mkdir .diary
 
 if (cat $HOME/.bashrc|grep "liuzheng_bashrc")
 then
