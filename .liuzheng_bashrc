@@ -142,6 +142,19 @@ function psshg(){
 
 }
 
+# gitsubupdate
+function gitsubupdate()
+{
+  fn=`git commit | grep 'modified:' | sed -e 's/.*: *\(.*\) .* .*/\1/g'`
+  for name in $fn
+    do 
+      rm -rf $name
+      rm -rf './git/submodule/'$name
+      git submodule init
+      git submodule update
+    done
+}
+
 
 function gb2utf()
 {
