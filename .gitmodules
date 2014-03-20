@@ -202,3 +202,10 @@
 [submodule ".vim/bundle/fcitx.vim"]
 	path = .vim/bundle/fcitx.vim
 	url = https://github.com/vim-scripts/fcitx.vim.git
+[submodule ".diary"]
+	path = .diary
+	url = git@bitbucket.org:liuzheng712/.diary.git
+[submodule "fmd"]
+	path = fmd
+	url = https://github.com/hzqtc/fmd.git
+	branch = master
