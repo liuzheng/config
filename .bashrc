@@ -86,3 +86,4 @@ PATH=$M2:$PATH
 complete -cf sudo
 complete -cf man
 alias sublime='/opt/sublime/sublime_text'
+source /etc/profile.d/vte.sh
