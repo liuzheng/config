@@ -310,9 +310,14 @@ endfunc
 "--------------------------LaTeX End-------------------------------------
 
 "-------------------------pathogen--------------------------------
-runtime bundle/vim-pathogen/autoload/pathogen.vim
+#runtime bundle/vim-pathogen/autoload/pathogen.vim
+#call pathogen#infect()
+#Helptags
+# for windows update
+set nocp
 call pathogen#infect()
-Helptags
+syntax on
+filetype plugin indent on
 "-----------------------pathogen end------------------------------
 
 "-----------------------powerline---------------------------------
