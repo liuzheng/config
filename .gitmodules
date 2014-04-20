@@ -199,9 +199,6 @@
 [submodule ".vim/bundle/vim-tmux-navigator"]
 	path = .vim/bundle/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator.git
-[submodule ".vim/bundle/fcitx.vim"]
-	path = .vim/bundle/fcitx.vim
-	url = https://github.com/vim-scripts/fcitx.vim.git
 [submodule ".diary"]
 	path = .diary
 	url = git@bitbucket.org:liuzheng712/.diary.git
