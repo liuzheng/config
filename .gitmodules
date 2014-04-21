@@ -115,9 +115,6 @@
 [submodule ".vim/bundle/JavaBrowser"]
 	path = .vim/bundle/JavaBrowser
 	url = https://github.com/vim-scripts/JavaBrowser.git
-[submodule ".vim/bundle/vjde"]
-	path = .vim/bundle/vjde
-	url = https://github.com/cespare/vjde.git
 [submodule ".vim/bundle/Auto-Pairs"]
 	path = .vim/bundle/Auto-Pairs
 	url = https://github.com/vim-scripts/Auto-Pairs.git
