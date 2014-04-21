@@ -72,7 +72,9 @@ alias goagent='python /opt/goagent/local/proxy.py'
 PATH=/usr/local/texlive/2012/bin/i386-linux:$PATH; export PATH
 MANPATH=/usr/local/texlive/2012/texmf/doc/man:$MANPATH; export MANPATH
 INFOPATH=/usr/local/texlive/2012/texmf/doc/info:$INFOPATH; export INFOPATH
-JAVA_HOME=/opt/java
+#JAVA_HOME=/opt/java
+#for intellij
+JAVA_HOME=$(readlink -f /opt/java | sed "s:bin/javac::")
 PATH=$PATH:$JAVA_HOME/bin:$JAVA_HOME/jre/bin:/home/liuzheng/python/bypy
 CLASSPATH=.:$JAVA_HOME/lib:$JAVA_HOME/jre/lib:$CLASSPATH
 M2_HOME=/opt/maven
