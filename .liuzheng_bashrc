@@ -203,6 +203,11 @@ function addswap()
 
 }
 
+# find same file
+function fsamef()
+{
+  find . \! -type d -exec md5sum '{}' ';' | sort | uniq -D -w 33
+}
 
 #==================function end=================
 
