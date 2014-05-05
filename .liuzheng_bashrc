@@ -128,17 +128,17 @@ function ii()
 function ff() { find . -type f -iname '*'$*'*' -ls ; }
 
 function psshc(){
-      pssh -h /root/liuzheng/server.list -l root -P $1
+      pssh -h ~/config/server.list -l root -P $1
 
 }
 
 function psshp(){
-      pscp -h /root/liuzheng/server.list -l root $1 $2
+      pscp -h ~/config/server.list -l root $1 $2
 
 }
 
 function psshg(){
-      prsync -r -h /root/liuzheng/server.list -l $1 $2
+      prsync -r -h ~/config/server.list -l $1 $2
 
 }
 
