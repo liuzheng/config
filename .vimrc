@@ -378,3 +378,4 @@ nnoremap <silent> {Previoust-Mapping} :TmuxNavigatePrevious<cr>
 
 "-----------------vim-gundo---------------------------------------
 map <F7> :GundoToggle<CR>
+

@@ -3,6 +3,8 @@ export PS1='\033[1;32;48m[\033[1;31;48m\u\033[1;31;48m@\033[4;32;48m\h\033[0;32;
 
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
+HISTSIZE=10000
+HISTFILESIZE=20000
 
 #===================alias=======================
 # ls
