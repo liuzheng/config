@@ -86,7 +86,6 @@ PATH=$M2:$PATH:$CLASSPATH
 
 #Enabling tab-completion
 complete -cf sudo
-complete -cf git
 
 complete -cf man
 alias sublime='/opt/sublime/sublime_text'
