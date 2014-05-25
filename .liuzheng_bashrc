@@ -147,14 +147,17 @@ function psshg(){
 # gitsubupdate
 function gitsubupdate()
 {
-  fn=`git commit | grep 'modified:' | sed -e 's/.*: *\(.*\) .* .*/\1/g'`
-  for name in $fn
-    do 
-      rm -rf $name
-      rm -rf './git/submodule/'$name
-      git submodule init
-      git submodule update
-    done
+  git commit | grep 'modified' | grep 'untracked' | awk '{print "rm -fr " $2 "&& rm -fr ./git/submodule/"$2}' | sh
+  git submodule init
+  git submodule update
+  #fn=`git commit | grep 'modified:' | sed -e 's/.*: *\(.*\) .* .*/\1/g'`
+  #for name in $fn
+  #  do 
+  #    rm -rf $name
+  #    rm -rf './git/submodule/'$name
+  #    git submodule init
+  #    git submodule update
+  #  done
 }
 
 
