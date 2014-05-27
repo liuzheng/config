@@ -449,4 +449,4 @@ export EDITOR=/usr/bin/vim
 
 
 #============= git complete ===================
-. ./config/git-completion.bash
+. ~/config/git-completion.bash
