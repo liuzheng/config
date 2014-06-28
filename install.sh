@@ -14,7 +14,7 @@ fi
 git submodule init
 git submodule update
 . ~/.bashrc
-sudo apt-get install ctags tmux
+sudo apt-get install ctags tmux cmake libpython-dev build-essential
 cd `pwd`/.vim/bundle/YouCompleteMe
 git submodule update --init --recursive
 ./install.sh --clang-completer
