@@ -1,9 +1,9 @@
 #!/bin/bash
 #------------------------------------------------------------------------#
-MIRRORS_LIST=$HOME/.ubuntu_mirrors.list         #文件名和存储位置都可以改，存放所有的源列表
-MIRRORS_SCORED=$HOME/.ubuntu_mirrors            #文件名和存储位置都可以改，存放测试后速度快的几个源
-VERSION="hardy"                                #ubuntu版本发生变化时，就更改这个"hardy"为相应的版本号
-ARCHITECTURE="i386"
+MIRRORS_LIST=./.ubuntu_mirrors.list         #文件名和存储位置都可以改，存放所有的源列表
+MIRRORS_SCORED=./.ubuntu_mirrors            #文件名和存储位置都可以改，存放测试后速度快的几个源
+VERSION=`lsb_release -a | grep 'Codename' | awk '{print $2}'`                                #ubuntu版本发生变化时，就更改这个"hardy"为相应的版本号
+ARCHITECTURE=`uname -i`
 TIMEOUT=20    
 CONCURRENT_PROCESSES=30
 #------------------------------------------------------------------------#
