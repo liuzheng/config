@@ -53,10 +53,10 @@ output_sources()
         echo "deb $mirror $VERSION $COMP" >> $tmp
         echo "deb $mirror ${VERSION}-security $COMP" >> $tmp
         echo "deb $mirror ${VERSION}-updates $COMP" >> $tmp
-        echo -n "Do you want to include source packages? [y/n]"
+        echo -n "Do you want to include source packages? [Y/n]"
         local yn 
         read yn
-        if [ "$yn" == "y" ]; then
+        if [ "$yn" == "y" or "$yn" == "" ]; then
             echo "deb-src $mirror $VERSION $COMP" >> $tmp
             echo "deb-src $mirror ${VERSION}-security $COMP" >> $tmp
             echo "deb-src $mirror ${VERSION}-updates $COMP" >> $tmp
@@ -64,15 +64,21 @@ output_sources()
         echo >> $tmp
     done
     if [ -f "$tmp" ]; then
-        echo -n "Do you want to continue? [y/n]"
+        echo -n "Do you want to continue? [Y/n]"
         local yn
         read yn
-        if [ "$yn" != "y" ]; then
+        if [ "$yn" == "y" or "$yn" == "" ]; then
             exit 0
         fi
         backup_sources
         sudo mv "$tmp" /etc/apt/sources.list
         echo "Your sources has been updated, and maybe you want to run \"sudo apt-get update\" now. ";
+        echo -n "sudo apt-get update now? [Y/n]"
+        local yn
+        read yn
+        if [ "$yn" == "y" or "$yn" == "" ]; then
+            sudo apt-get update
+        fi
     else
         echo "some badthing has happen...."
         exit 1
