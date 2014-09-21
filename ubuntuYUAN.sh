@@ -56,7 +56,10 @@ output_sources()
         echo -n "Do you want to include source packages? [Y/n]"
         local yn 
         read yn
-        if [ "$yn" == "y" or "$yn" == "" ]; then
+        if [ -z $yn ]; then
+          yn="y"
+        fi
+        if [ "$yn" == "y" ]; then
             echo "deb-src $mirror $VERSION $COMP" >> $tmp
             echo "deb-src $mirror ${VERSION}-security $COMP" >> $tmp
             echo "deb-src $mirror ${VERSION}-updates $COMP" >> $tmp
@@ -67,17 +70,23 @@ output_sources()
         echo -n "Do you want to continue? [Y/n]"
         local yn
         read yn
-        if [ "$yn" == "y" or "$yn" == "" ]; then
+        if [ -z $yn ]; then
+          yn="y"
+        fi
+        if [ ! "$yn" == "y" ]; then
             exit 0
         fi
         backup_sources
         sudo mv "$tmp" /etc/apt/sources.list
         echo "Your sources has been updated, and maybe you want to run \"sudo apt-get update\" now. ";
         echo -n "sudo apt-get update now? [Y/n]"
-        local yn
-        read yn
-        if [ "$yn" == "y" or "$yn" == "" ]; then
-            sudo apt-get update
+        read yn 
+        if [ -z $yn ]; then
+          yn="y"
+        fi
+        if [ "$yn" == "y" ]; then
+          echo "sudo apt-get update"
+          sudo apt-get update
         fi
     else
         echo "some badthing has happen...."
