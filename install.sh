@@ -11,10 +11,9 @@ then
 else
     echo "source $PWD/.liuzheng_bashrc">>$HOME/.bashrc
 fi
-git submodule init
-git submodule update
+git submodule update --init --depth 1
 . ~/.bashrc
 sudo apt-get install ctags tmux cmake libpython-dev build-essential
 cd `pwd`/.vim/bundle/YouCompleteMe
-git submodule update --init --recursive
+git submodule update --init --recursive --depth 1
 ./install.sh --clang-completer
