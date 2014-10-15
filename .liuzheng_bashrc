@@ -214,6 +214,27 @@ function fsamef()
   find . \! -type d -exec md5sum '{}' ';' | sort | uniq -D -w 33
 }
 
+# salt function
+function saltall()
+{
+  sudo salt '*' $1 $2 $3
+}
+
+function saltpingall()
+{
+  saltall test.ping
+}
+
+function saltcpfile()
+{
+  saltall cp.get_file salt://$1 $2 
+}
+
+function saltcmd()
+{
+  saltall cmd.run $*
+}
+
 #==================function end=================
 
 #=================complete======================
