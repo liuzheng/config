@@ -232,7 +232,11 @@ function saltcpfile()
 
 function saltcmd()
 {
-  saltall cmd.run $*
+  for i in $*
+  do
+    p=$p" "$i
+  done
+  sudo salt '*' cmd.run " $p "
 }
 
 #==================function end=================
