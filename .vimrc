@@ -345,8 +345,8 @@ set nocp
 
 
 "------------------- JavaComplete --------------------------------
-setlocal omnifunc=javacomplete#Complete 
-autocmd Filetype java set omnifunc=javacomplete#Conplete
+setlocal omnifunc=javacomplete#Complete
+autocmd Filetype java set omnifunc=javacomplete#Complete
 "autocmd Filetype java set completefunc=javacomplete#CompleteParamsInf
 inoremap <buffer> <C-X><C-U> <C-X><C-U><C-P> 
 inoremap <buffer> <C-S-Space> <C-X><C-U><C-P> 
