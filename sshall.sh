@@ -1,5 +1,5 @@
 #!/bin/bash
-node=(master slave1 slave2 slave3 slave4)  # hostname for each node
+node=(master slave1 slave2 slave3 slave4 slave5 slave6)  # hostname for each node
 username=hadoop            # username to be interconnected
 homename=$username        # home dir, i.e. home/zhangyang
 if [ "$username" = "root" ];
@@ -31,6 +31,9 @@ do
         cat /$homename/.ssh/${node[i]}.key >> /$homename/.ssh/authorized_keys
         echo "append ${node[i]}.key finished..."
 done
+
+cat /$homename/.ssh/authorized_keys | awk '!a[$2]++' > /tmp/authorized_keys
+mv /tmp/authorized_keys /$homename/.ssh/authorized_keys
 
 echo "append all key finished..."
 loop=${#node[*]}
