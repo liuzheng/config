@@ -232,6 +232,7 @@ function saltcpfile()
 
 function saltcmd()
 {
+  p=""
   for i in $*
   do
     p=$p" "$i
