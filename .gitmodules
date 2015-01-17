@@ -205,6 +205,3 @@
 [submodule "fmc"]
 	path = fmc
 	url = https://github.com/hzqtc/fmc.git
-[submodule ".vim/bundle/vjde"]
-	path = .vim/bundle/vjde
-	url = https://github.com/cespare/vjde.git
