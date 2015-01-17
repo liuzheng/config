@@ -2,3 +2,4 @@
 *.swp
 .ubuntu_mirrors*
 .ubuntu_mirrors
+*.pyc
