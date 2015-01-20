@@ -906,5 +906,6 @@
 203.208.45.206	ytimg.l.google.com
 #YouTube END
 
-#SmartHosts END192.30.252.128 github.com
+#SmartHosts END
+192.30.252.128 github.com
 23.14.92.203    a248.e.akamai.net
