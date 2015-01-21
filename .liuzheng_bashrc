@@ -88,8 +88,12 @@ git rm -r $1
 # pathogen git add
 function vimgit()
 {
-name=`echo $1|sed 's/.*\/\(.*\)\.git/\1/g'`
-git submodule add $1 .vim/bundle/$name
+  if [ -z $1 ];then
+    echo 'Usage: vimgit GITPATH, examp: vimgit https://github.com/vim-scripts/The-NERD-tree.git'
+  else
+    name=`echo $1|sed 's/.*\/\(.*\)\.git/\1/g'`
+      git submodule add $1 .vim/bundle/$name
+  fi
 }
 
 # pathogen git pull all
