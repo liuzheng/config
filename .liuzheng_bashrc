@@ -245,6 +245,22 @@ function saltcmd()
   sudo salt '*' cmd.run " $p "
 }
 
+function xelatein()
+{
+  cp ~/config/simple/xelatex/* .
+  case $1 in
+    book)
+      rm *article*
+    ;;
+    article)
+      rm *book*
+    ;;
+    *)
+      rm *book*
+    ;;
+  esac
+}
+
 #==================function end=================
 
 #=================complete======================
