@@ -116,6 +116,8 @@ autocmd BufNewFile *.tex    0r ~/config/simple/simple.tex
 autocmd BufNewFile *.cl    0r ~/config/simple/simple.cl
 autocmd BufNewFile *.cu    0r ~/config/simple/simple.cu
 autocmd BufNewFile *.sh    0r ~/config/simple/simple.sh
+autocmd BufNewFile *.htm   0r ~/config/simple/simple.html
+autocmd BufNewFile *.html   0r ~/config/simple/simple.html
 
 au GUIEnter * simalt ~x
 
