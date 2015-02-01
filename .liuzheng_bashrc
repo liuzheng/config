@@ -170,38 +170,6 @@ function gb2utf()
     iconv -f gb2312 -t utf-8 $1>$1+f && mv $1+f $1
 }
 
-# doubanFM need git github.com/hzqtc/fmc.git & github.com/hzqtc/fmd.git
-function doubanFM()
-{
-if ps aux|grep fmd|grep -v grep 
-then
-echo 
-else
-    /usr/local/bin/fmd start &
-fi
-case $1 in
-    play|stop|pause|toggle|skip|ban|rate|unrate|info|channels|end)
-    fmc -a 127.0.0.1 -p 10098 $1
-    ;;
-    help)
-    echo "play|stop|pause|toggle|skip|ban|rate|unrate|info|channels|end|setch"
-    ;;
-    setch)
-    fmc -a 127.0.0.1 -p 10098 $1 $2
-    ;;
-    *)
-    if fmc -a 127.0.0.1 -p 10098|grep -i stop|grep -v grep
-    then
-        fmc -a 127.0.0.1 -p 10098 play
-    elif fmc -a 127.0.0.1 -p 10098|grep -i pause|grep -v grep;then
-        fmc -a 127.0.0.1 -p 10098 play
-    else
-        fmc -a 127.0.0.1 -p 10098 stop
-    fi
-    ;;
-esac
-}
-
 # swap
 function addswap()
 {

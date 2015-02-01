@@ -12,3 +12,10 @@ and your vim version requires 7.3.584+
 For Ubuntu to install 
 $ cd ~/.vim/bundle/YouCompleteMe
 $ ./install.sh --clang-completer
+
+# TeX相关
+如果需要使用陈硕的一些latex工具
+
+    git clone https://github.com/chenshuo/recipes.git --depth 1
+
+在utility/中的是统计字数的工具
