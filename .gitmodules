@@ -199,12 +199,6 @@
 [submodule ".diary"]
 	path = .diary
 	url = git@bitbucket.org:liuzheng712/.diary.git
-[submodule "fmd"]
-	path = fmd
-	url = https://github.com/hzqtc/fmd.git
-[submodule "fmc"]
-	path = fmc
-	url = https://github.com/hzqtc/fmc.git
 [submodule "bypy"]
 	path = bypy
 	url = https://github.com/houtianze/bypy.git
