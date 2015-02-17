@@ -228,6 +228,16 @@ function xelatein()
     ;;
   esac
 }
+function sj()
+{
+  date +%T
+}
+function rq(){
+  date +%F
+}
+function SJ(){
+  date +%F-%T
+}
 
 #==================function end=================
 
