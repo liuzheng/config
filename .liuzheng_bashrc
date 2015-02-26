@@ -213,7 +213,7 @@ function saltcmd()
   sudo salt '*' cmd.run " $p "
 }
 
-function xelatein()
+function xelatexin()
 {
   cp ~/config/simple/xelatex/* .
   case $1 in
@@ -228,16 +228,10 @@ function xelatein()
     ;;
   esac
 }
-function sj()
-{
-  date +%T
-}
-function rq(){
-  date +%F
-}
-function SJ(){
-  date +%F-%T
-}
+function sj() { date +%T ; }
+function rq() { date +%F ; }
+function SJ() { date +%F-%T ; }
+function addblog() { rake post title="$1" ; }
 
 #==================function end=================
 
