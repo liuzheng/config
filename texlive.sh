@@ -6,7 +6,7 @@ if [ `id -u` -ne 0 ]; then
   exit 1
 fi
 TEX_Version=0
-for i in `ls /usr/local/texlive`;
+for i in `ls /usr/local/texlive|grep 2`;
 do
   if [ $TEX_Version -le $i ];then
     TEX_Version=$i
