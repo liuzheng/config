@@ -202,6 +202,3 @@
 [submodule "bypy"]
 	path = bypy
 	url = https://github.com/houtianze/bypy.git
-[submodule "baidu.fm"]
-	path = baidu.fm
-	url = https://github.com/frosh-li/baidu.fm
