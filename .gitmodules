@@ -202,3 +202,6 @@
 [submodule "bypy"]
 	path = bypy
 	url = https://github.com/houtianze/bypy.git
+[submodule "thor"]
+	path = thor
+	url = https://github.com/fayhot/thor.git

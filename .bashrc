@@ -66,6 +66,14 @@ if [ -x /usr/lib/command-not-found -o -x /usr/share/command-not-found/command-no
 		fi
 	}
 fi
+if [ -x ./thor ]; then
+  . ./thor 
+  alias t='thor'
+  alias tl='thor -l'
+  alias ta='thor -a'
+  alias td='thor -r'
+fi
+
 source ~/config/.liuzheng_bashrc
 alias matlab='/opt/MATLAB/R2012a/bin/matlab'
 alias goagent='python /opt/goagent/local/proxy.py'
