@@ -66,8 +66,8 @@ if [ -x /usr/lib/command-not-found -o -x /usr/share/command-not-found/command-no
 		fi
 	}
 fi
-if [ -x ./thor ]; then
-  . ./thor 
+if [ -x ./thor/thor ]; then
+  . ./thor/thor 
   alias t='thor'
   alias tl='thor -l'
   alias ta='thor -a'
