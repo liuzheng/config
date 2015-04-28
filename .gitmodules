@@ -204,7 +204,7 @@
 	url = https://github.com/houtianze/bypy.git
 [submodule "thor"]
 	path = thor
-	url = https://github.com/fayhot/thor.git
+	url = https://github.com/liuzheng712/thor.git
 [submodule ".vim/bundle/tern_for_vim"]
 	path = .vim/bundle/tern_for_vim
 	url = https://github.com/marijnh/tern_for_vim.git
