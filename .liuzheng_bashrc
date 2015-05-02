@@ -50,6 +50,11 @@ alias gitm='git commit'
 alias gitM='git commit -m'
 alias gits='git push'
 
+# grep
+alias grep='grep --color'
+alias egrep='egrep --color'
+alias fgrep='fgrep --color'
+
 #===================alias end===================
 
 #====================color======================
