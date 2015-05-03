@@ -97,4 +97,3 @@ complete -cf sudo
 
 complete -cf man
 alias sublime='/opt/sublime/sublime.sh'
-source /etc/profile.d/vte.sh
