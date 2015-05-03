@@ -81,3 +81,4 @@ complete -cf sudo
 
 complete -cf man
 alias sublime='/opt/sublime/sublime.sh'
+export DYLD_FORCE_FLAT_NAMESPACE=1
