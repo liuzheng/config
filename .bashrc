@@ -15,9 +15,6 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-# set a fancy prompt (non-color, overwrite the one in /etc/profile)
-PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-
 # Commented out, don't overwrite xterm -T "title" -n "icontitle" by default.
 # If this is an xterm set the title to user@host:dir
 #case "$TERM" in
@@ -35,19 +32,6 @@ if ! shopt -oq posix; then
   elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
   fi
-fi
-
-# sudo hint
-if [ ! -e "$HOME/.sudo_as_admin_successful" ] && [ ! -e "$HOME/.hushlogin" ] ; then
-    case " $(groups) " in *\ admin\ *)
-    if [ -x /usr/bin/sudo ]; then
-	cat <<-EOF
-	To run a command as administrator (user "root"), use "sudo <command>".
-	See "man sudo_root" for details.
-	
-	EOF
-    fi
-    esac
 fi
 
 # if the command-not-found package is installed, use it
