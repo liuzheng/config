@@ -20,7 +20,7 @@ set ignorecase		"搜索时忽略大小写
 set smartcase       " 有一个或以上大写字母时仍大小写敏感 
 set enc=utf8	"文件默认编码
 set fileencodings=utf-8,ucs-bom,cp936,gb2312,gbk,gb18030,big5,euc-jp,euc-kr,latin1 "检测编码顺序
-language messages en_US.utf8 " 设定菜单语言
+language messages en_US" 设定菜单语言
 set showmatch		"高亮匹配的括号
 set matchtime=5		"匹配括号高亮的时间（单位时十分之一秒）
 set softtabstop=4
