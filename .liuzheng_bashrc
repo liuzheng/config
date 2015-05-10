@@ -54,7 +54,7 @@ alias gits='git push'
 alias grep='grep --color'
 alias egrep='egrep --color'
 alias fgrep='fgrep --color'
-
+alias vime='/opt/vim/bin/vim'
 #===================alias end===================
 
 #====================color======================
