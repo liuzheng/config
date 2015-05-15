@@ -5,7 +5,7 @@ if [ `id -u` -ne 0 ]; then
   echo "It must be executed by root."
   exit 1
 fi
-TEX_Version=0
+TEX_Version=.
 for i in `ls /usr/local/texlive|grep 2`;
 do
   if [ $TEX_Version -le $i ];then
