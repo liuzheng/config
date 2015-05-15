@@ -323,12 +323,13 @@ set nocp
 
 "-----------------------powerline---------------------------------
 "let g:Powerline_symbols = 'fancy'
+" Because Im using Monaco font , so the fancy didnt suit for me 
 "set fillchars+=stl: ,stlnc:
-"set nocompatible
-"set t_Co=256
-"let g:Powerline_cache_enabled = 1
-"let g:Powerline_cache_file='~/.vim/bundle/powerline/Powerline.cache'
-"set laststatus=2   " Always show the statusline 
+set nocompatible
+set t_Co=256
+let g:Powerline_cache_enabled = 1
+let g:Powerline_cache_file='/Users/liuzheng/.vim/bundle/powerline/Powerline.cache'
+set laststatus=2   " Always show the statusline 
 "-----------------------powerline end-----------------------------
 
 "------------------- The matlab Connection -----------------------
