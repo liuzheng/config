@@ -127,9 +127,6 @@
 [submodule ".vim/bundle/python_fold"]
 	path = .vim/bundle/python_fold
 	url = https://github.com/mcapell/python_fold.git
-[submodule ".vim/bundle/vim-autocomplpop"]
-	path = .vim/bundle/vim-autocomplpop
-	url = https://github.com/othree/vim-autocomplpop.git
 [submodule ".vim/bundle/vim-l9"]
 	path = .vim/bundle/vim-l9
 	url = https://github.com/git-mirror/vim-l9.git
