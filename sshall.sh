@@ -42,7 +42,7 @@ echo "starting scp complete authorized_keys to ${node[1]}~${node[subloop]}"
 for((i=1; i<${#node[*]}; i++))
 do
         scp /$homename/.ssh/authorized_keys ${node[i]}:/$homename/.ssh/authorized_keys.tmp
-        ssh $username@${node[i]} -c "cat ~/.ssh/authorized_keys.tmp >> ~/.ssh/authorized_keys | sort > /tmp/authorized_keys && mv /tmp/authorized_keys ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
+        ssh $username@${node[i]} -C "cat ~/.ssh/authorized_keys.tmp >> ~/.ssh/authorized_keys | sort > /tmp/authorized_keys && mv /tmp/authorized_keys ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
         echo "scp to ${node[i]} finished..."
 done
 echo "scp all nodes finished..."
