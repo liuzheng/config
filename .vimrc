@@ -354,7 +354,7 @@ autocmd Filetype java set omnifunc=javacomplete#Complete
 "autocmd Filetype java set completefunc=javacomplete#CompleteParamsInf
 inoremap <buffer> <C-X><C-U> <C-X><C-U><C-P> 
 inoremap <buffer> <C-S-Space> <C-X><C-U><C-P> 
-autocmd Filetype java,javascript,jsp inoremap .  .<C-X><C-O>
+autocmd Filetype java,jsp inoremap .  .<C-X><C-O>
 
 "-----------------JavaBrowser------------------------------------
 let JavaBrowser_Ctags_Cmd = '/usr/bin/ctags'

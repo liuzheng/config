@@ -237,7 +237,11 @@ function sj() { date +%T ; }
 function rq() { date +%F ; }
 function SJ() { date +%F-%T ; }
 function addblog() { rake post title="$1" ; }
-
+function dockerstart(){
+    eval "$(docker-machine env $1)"
+    export DOCKER_OPTS="-H $DOCKER_HOST --tls --tlskey $DOCKER_CERT_PATH/server-key.pem --tlscert $DOCKER_CERT_PATH/server.pem --tlsverify --tlscacert $DOCKER_CERT_PATH/ca.pem"
+    alias dockers="docker $DOCKER_OPTS"
+}
 #==================function end=================
 
 #=================complete======================
