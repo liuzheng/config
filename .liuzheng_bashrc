@@ -18,6 +18,7 @@ alias lu='ls -lur'
 alias lr='ls -lR'
 alias lt='ls -ltr'
 alias lm='ls -al |more'
+alias dit="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock nate/dockviz images -t"
 
 # hand wrong
 alias vf='cd'
