@@ -5,6 +5,7 @@ bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 HISTSIZE=10000
 HISTFILESIZE=20000
+TF_ALIAS=fuck alias fuck='PYTHONIOENCODING=utf-8 eval $(thefuck $(fc -ln -1)); history -r'
 
 #===================alias=======================
 # ls
