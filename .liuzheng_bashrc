@@ -245,6 +245,7 @@ function dockerstart(){
   export DOCKER_OPTS="-H $DOCKER_HOST --tls --tlskey $DOCKER_CERT_PATH/server-key.pem --tlscert $DOCKER_CERT_PATH/server.pem --tlsverify --tlscacert $DOCKER_CERT_PATH/ca.pem"
   alias dockers="docker $DOCKER_OPTS"
 }
+alias dsit="dockers run --rm -v /var/run/docker.sock:/var/run/docker.sock nate/dockviz images -t"
 #==================function end=================
 
 #=================complete======================
