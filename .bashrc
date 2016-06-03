@@ -69,3 +69,4 @@ export XS_HOME=$F_HOME/xs
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
 [ -f ~/.bashrc_docker ] && . ~/.bashrc_docker
+export GOPATH=/opt/gopath

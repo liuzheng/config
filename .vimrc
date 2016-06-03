@@ -149,7 +149,10 @@ inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
 inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
 inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" :"\<PageDown>"
 inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" :"\<PageUp>"
-
+map <Esc>[A <Up>
+map <Esc>[B <Down>
+map <Esc>[C <Right>
+map <Esc>[D <Left>
 
 " 括号及引号自动补全
 inoremap ) (  )<Esc>hi
