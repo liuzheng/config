@@ -371,7 +371,8 @@ let g:pydiction_location='/home/liuzheng/.vim/bundle/Pydiction/complete-dict'
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=79
 
 "-----------------Jedi-------------------------------------------
-"let g:jedi#use_tabs_not_buffers = 0
+let g:jedi#use_tabs_not_buffers = 1
+
 
 "-----------------vim-tmux---------------------------------------
 let g:tmux_navigator_no_mappings = 1
