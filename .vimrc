@@ -373,6 +373,8 @@ autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=
 "-----------------Jedi-------------------------------------------
 let g:jedi#use_tabs_not_buffers = 1
 
+"-----------------rainbow-------------------------------------------
+let g:rainbow_active = 1
 
 "-----------------vim-tmux---------------------------------------
 let g:tmux_navigator_no_mappings = 1
@@ -388,3 +390,8 @@ nnoremap <silent> {Previoust-Mapping} :TmuxNavigatePrevious<cr>
 map <F7> :GundoToggle<CR>
 
 "highlight Normal ctermfg=black ctermbg=180
+"-------------------NERDTre-----------------
+let g:NERDTreeDirArrows = 1
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+
