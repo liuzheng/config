@@ -386,3 +386,7 @@ nnoremap <silent> {Previoust-Mapping} :TmuxNavigatePrevious<cr>
 map <F7> :GundoToggle<CR>
 
 "highlight Normal ctermfg=black ctermbg=180
+"-------------------NERDTre-----------------
+let g:NERDTreeDirArrows = 1
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
