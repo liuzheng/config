@@ -121,7 +121,7 @@ function vimgit()
 # pathogen git pull all
 function vimupdate()
 {
-git submodule foreach 'git checkout master && git pull'
+git submodule foreach 'git checkout master && git clean -fx && git pull'
 }
 
 # get ip
