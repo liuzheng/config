@@ -5,8 +5,6 @@
 set nocompatible    "vi 兼容模式
 set cursorline		"突出显示当前行
 set cursorcolumn    "突出显示当前列
-hi CursorLine  cterm=NONE   ctermbg=darkred ctermfg=white
-hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white
 set number			"显示行号
 set relativenumber  "相对行号
 set expandtab		"插入tab符号以空格替换
@@ -398,3 +396,6 @@ map <F7> :GundoToggle<CR>
 let g:NERDTreeDirArrows = 1
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
+
+hi CursorLine  cterm=NONE   ctermbg=darkred ctermfg=white
+hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white
