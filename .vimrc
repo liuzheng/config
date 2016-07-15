@@ -4,6 +4,7 @@
 "--------------------------------------------------------------
 set nocompatible    "vi 兼容模式
 set cursorline		"突出显示当前行
+set cursorcolumn    "突出显示当前列
 hi CursorLine  cterm=NONE   ctermbg=darkred ctermfg=white
 hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white
 set number			"显示行号
