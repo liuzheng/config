@@ -4,10 +4,12 @@
 "--------------------------------------------------------------
 set nocompatible    "vi 兼容模式
 set cursorline		"突出显示当前行
+hi CursorLine  cterm=NONE   ctermbg=darkred ctermfg=white
+hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white
 set number			"显示行号
 set relativenumber  "相对行号
 set expandtab		"插入tab符号以空格替换
-set autoindent		"开启自动缩进
+set autoindent		"开启自动进
 set tabstop=4		"设定tab长度
 set smartindent		"开启新行时使用智能自动缩进
 set smarttab		"开启新行时使用智能tab缩进
