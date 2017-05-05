@@ -6,6 +6,7 @@ bind '"\e[B": history-search-forward'
 HISTSIZE=10000
 HISTFILESIZE=20000
 TF_ALIAS=fuck alias fuck='PYTHONIOENCODING=utf-8 eval $(thefuck $(fc -ln -1)); history -r'
+CDPATH=$HOME/gitproject:/opt/gopath/src/github.com/liuzheng712/
 
 #===================alias=======================
 # ls
@@ -41,6 +42,10 @@ alias lcl="clear"
 
 # cd
 alias c="cd"
+alias cd..="cd .."
+alias cd...="cd ../.."
+alias cd....="cd ../../.."
+alias cd....="cd ../../../.."
 
 # git
 alias gitc='git clone'
@@ -129,6 +134,16 @@ function myip()
 {
     MY_IP=$(/sbin/ifconfig eth0 | awk '/inet/ { print $2 } ' | sed -e s/addr://)
     MY_ISP=$(/sbin/ifconfig eth0 | awk '/P-t-P/ { print $3 } ' | sed -e s/P-t-P://)
+}
+
+# docker clean
+function docker-none-clean()
+{
+  docker images | grep none | awk '{print "docker rmi -f "$3}' | sh
+}
+function docker-clean()
+{
+  docker ps -a | grep Exited | awk '{print "docker rm -f "$1}' | sh
 }
 
 # find text in the file

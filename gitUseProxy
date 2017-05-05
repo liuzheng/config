@@ -1,0 +1,2 @@
+#!/bin/sh
+connect -H cs.ilz.me:22222 ""
