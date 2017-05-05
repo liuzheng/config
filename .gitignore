@@ -3,3 +3,4 @@
 .ubuntu_mirrors*
 .ubuntu_mirrors
 *.pyc
+node_modules/
