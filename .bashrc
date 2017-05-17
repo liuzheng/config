@@ -70,11 +70,12 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 [ -f ~/.bashrc_docker ] && . ~/.bashrc_docker
 export GOPATH=/opt/gopath
+export GOROOT=/opt/go
 
 complete -W "$(echo $(grep '^Host ' ~/.ssh/config  | sort -u | sed 's/^ssh //'))" ssh
 
 complete -W "$(echo $(grep '^Host ' ~/.ssh/config  | sort -u | sed 's/^scp //'))" scp
-export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 # Setting PATH for Python 2.7
 # The original version is saved in .bash_profile.pysave

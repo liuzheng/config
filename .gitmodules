@@ -31,9 +31,6 @@
 [submodule ".vim/bundle/c.vim"]
 	path = .vim/bundle/c.vim
 	url = https://github.com/vim-scripts/c.vim.git
-[submodule ".vim/bundle/sudoku_game"]
-	path = .vim/bundle/sudoku_game
-	url = https://github.com/vim-scripts/sudoku_game.git
 [submodule ".vim/bundle/TeTrIs.vim"]
 	path = .vim/bundle/TeTrIs.vim
 	url = https://github.com/vim-scripts/TeTrIs.vim.git
