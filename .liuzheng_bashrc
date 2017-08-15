@@ -12,7 +12,7 @@ CDPATH=$HOME/gitproject:/opt/gopath/src/github.com/liuzheng712/
 # ls
 alias ll='ls -l'
 alias la='ls -Al'
-alias ls='ls -hF --color'
+alias ls='ls -FHG'
 alias lx='ls -lXB'
 alias lk='ls -lSr'
 alias lc='ls -lcr'
