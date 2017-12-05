@@ -11,6 +11,7 @@ if (cat $HOME/.bashrc|grep "liuzheng_bashrc")
 then
     echo "Already added"
 else
+    echo "" >> $HOME/.bashrc
     echo "source $PWD/.liuzheng_bashrc">>$HOME/.bashrc
 fi
 git submodule update --init #--depth 1
