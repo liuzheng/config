@@ -59,6 +59,7 @@ if [ -x ./thor/thor ]; then
 fi
 
 source ~/config/.liuzheng_bashrc
+source ~/config/kubectl.bashrc
 #Enabling tab-completion
 complete -cf sudo
 
@@ -69,18 +70,23 @@ export XS_HOME=$F_HOME/xs
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
 [ -f ~/.bashrc_docker ] && . ~/.bashrc_docker
-export GOPATH=/opt/gopath
+export JAVAHOME=/opt/java
+export GOLIB=/opt/gopath
+export GOPATH=$GOLIB:/Users/i317280/goproject/jumpserver
 export GOROOT=/opt/go
+PATH="$JAVAHOME/bin/:/usr/local/bin/:/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+export PATH=$PATH:$GOLIB/bin:$GOROOT/bin:/opt/gopath/bin/FlameGraph
+export M2_HOME=/opt/apache-maven-3.3.9
 
-complete -W "$(echo $(grep '^Host ' ~/.ssh/config  | sort -u | sed 's/^ssh //'))" ssh
+export NODE_PATH=/usr/local/lib/node_modules 
+export PATH=$PATH:$M2_HOME/bin
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export HISTSIZE=
+export HISTFILESIZE=
 
-complete -W "$(echo $(grep '^Host ' ~/.ssh/config  | sort -u | sed 's/^scp //'))" scp
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+alias gitpushdevelop="git push origin HEAD:refs/for/develop"
 
-# Setting PATH for Python 2.7
-# The original version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
-export PATH
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh"  ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-alias nw="/opt/nwjs/nwjs.app/Contents/MacOS/nwjs"
+
+if [ -f $(brew --prefix)/etc/bash_completion  ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
