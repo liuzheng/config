@@ -27,7 +27,7 @@ source ~/config/git-prompt.sh
 
 #==================color end====================
 PATH=$PATH:$HOME
-export PS1="$GREEN[$RED\u$YELLOW@$GREEN\h$cyan:$PATHCOLOR\w$NC\$(__git_ps1)$GREEN] $TIMECOLOR>>\d \t<<\n$NC${YELLOW}\$(__kube_ps1)$RED\$ $NC"
+export PS1="$GREEN[$RED\u$YELLOW@$GREEN\h$cyan:$PATHCOLOR\w$NC\$(__git_ps1)$GREEN] $TIMECOLOR>>\d \t<<$NC\n${YELLOW}\$(__kube_ps1)$RED\$\[\e[m\] "
 
 
 bind '"\e[A": history-search-backward'
