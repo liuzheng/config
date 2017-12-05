@@ -27,6 +27,6 @@ __git_ps1()
   fi
 
   if [[ -n "$M" ]]; then
-    echo -n -e "\e[33;40m($M)\e[01;32m\e[00m"
+    echo -n -e "($M)"
   fi
 }

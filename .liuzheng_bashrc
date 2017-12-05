@@ -17,7 +17,7 @@ green='\e[0;32m'
 GREEN='\e[1;32m'
 black='\e[0;30m'
 BLACK='\e[1;30m'
-NC='\e[0m'
+NC='\[\e[m\]'
 
 PATHCOLOR='\e[4;49;37m'
 TIMECOLOR='\e[1;32;40m'
@@ -27,7 +27,7 @@ source ~/config/git-prompt.sh
 
 #==================color end====================
 PATH=$PATH:$HOME
-export PS1="$GREEN[$RED\u$YELLOW@$GREEN\h$cyan:$PATHCOLOR\w$NC\$(__git_ps1)$GREEN] $TIMECOLOR>>\d \t<<$NC\n${YELLOW}\$(__kube_ps1)$RED\$\[\e[m\] "
+export PS1="$GREEN[$RED\u$YELLOW@$GREEN\h$cyan:$PATHCOLOR\w$NC$YELLOW\$(__git_ps1)$GREEN] $TIMECOLOR>>\d \t<<$NC\n${YELLOW}\$(__kube_ps1)$NC$RED\$\[\e[m\] "
 
 
 bind '"\e[A": history-search-backward'

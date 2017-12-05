@@ -6,6 +6,6 @@ __kube_ps1()
     CONTEXT=$(cat ~/.kube/config | grep "current-context:" | sed "s/current-context: //")
 
     if [[ -n "$CONTEXT" ]]; then
-        echo -n -e "(k8s: $CONTEXT)\e[00m"
+        echo -n -e "(k8s: $CONTEXT)"
     fi
 }
