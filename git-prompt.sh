@@ -1,6 +1,6 @@
 #!/bin/bash
 
-__git_ps1()
+__ps1_git()
 {
   # Get current context
   B=$(git branch 2>/dev/null | sed -e "/^ /d" -e "s/* \(.*\)/\1/")

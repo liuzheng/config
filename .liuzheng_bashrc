@@ -27,7 +27,7 @@ source ~/config/git-prompt.sh
 
 #==================color end====================
 PATH=$PATH:$HOME
-export PS1="$GREEN[$RED\u$YELLOW@$GREEN\h$cyan:$PATHCOLOR\w$NC$YELLOW\$(__git_ps1)$GREEN] $TIMECOLOR>>\d \t<<$NC\n${YELLOW}\$(__kube_ps1)$NC$RED\$\[\e[m\] "
+export PS1="$GREEN[$RED\u$YELLOW@$GREEN\h$cyan:$PATHCOLOR\w$NC$YELLOW\$(__ps1_git)$GREEN] $TIMECOLOR>>\d \t<<$NC\n${YELLOW}\$(__kube_ps1)$NC$RED\$\[\e[m\] "
 
 
 bind '"\e[A": history-search-backward'
@@ -41,7 +41,7 @@ CDPATH=$HOME/gitproject:/opt/gopath/src/github.com/liuzheng712/
 # ls
 alias ll='ls -l'
 alias la='ls -Al'
-alias ls='ls -FHG'
+alias ls='ls -FHG --color'
 alias lx='ls -lXB'
 alias lk='ls -lSr'
 alias lc='ls -lcr'
