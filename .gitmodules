@@ -187,6 +187,9 @@
 [submodule ".vim/bundle/vim-tmux"]
 	path = .vim/bundle/vim-tmux
 	url = https://github.com/tmux-plugins/vim-tmux.git
-[submodule ".vim/bundle/https:/github.com/pangloss/vim-javascript"]
-	path = .vim/bundle/https:/github.com/pangloss/vim-javascript
-	url = https://github.com/pangloss/vim-javascript
+[submodule ".vim/bundle/vim-javascript"]
+	path = .vim/bundle/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
+[submodule ".vim/bundle/gundo.vim"]
+	path = .vim/bundle/gundo.vim
+	url = https://github.com/dsummersl/gundo.vim.git
