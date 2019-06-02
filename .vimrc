@@ -1,4 +1,11 @@
 "http://xineohpanihc.iteye.com/blog/1146946
+"-------------------------pathogen--------------------------------
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
+Helptags
+" for windows update
+set nocp
+"-----------------------pathogen end------------------------------
 "--------------------------------------------------------------
 "General
 "--------------------------------------------------------------
@@ -173,7 +180,7 @@ map <C-c> y
 map <C-X> d
 map <C-A> <Esc>ggVG
 
-cmap Q q!<CR>
+"cmap Q q!<CR>
 
 " omnicomplete configure 
 set completeopt=menu,longest,preview
@@ -318,13 +325,6 @@ func! Showpdf()
 endfunc
 "--------------------------LaTeX End-------------------------------------
 
-"-------------------------pathogen--------------------------------
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
-Helptags
-" for windows update
-set nocp
-"-----------------------pathogen end------------------------------
 
 "-----------------------powerline---------------------------------
 "let g:Powerline_symbols = 'fancy'
