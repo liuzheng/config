@@ -24,6 +24,8 @@ TIMECOLOR='\e[1;32;40m'
 
 source ~/config/kube-prompt.sh
 source ~/config/git-prompt.sh
+#============= git complete ===================
+source ~/config/git-completion.bash
 
 #==================color end====================
 PATH=$PATH:$HOME
@@ -516,8 +518,6 @@ complete -o default -F _my_command command type which man nice
 export EDITOR=/usr/bin/vim
 
 
-#============= git complete ===================
-. ~/config/git-completion.bash
 
 
 
