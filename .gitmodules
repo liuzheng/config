@@ -31,18 +31,9 @@
 [submodule ".vim/bundle/c.vim"]
 	path = .vim/bundle/c.vim
 	url = https://github.com/vim-scripts/c.vim.git
-[submodule ".vim/bundle/eclim"]
-	path = .vim/bundle/eclim
-	url = https://github.com/ervandew/eclim.git
-[submodule ".vim/bundle/sudoku_game"]
-	path = .vim/bundle/sudoku_game
-	url = https://github.com/vim-scripts/sudoku_game.git
 [submodule ".vim/bundle/TeTrIs.vim"]
 	path = .vim/bundle/TeTrIs.vim
 	url = https://github.com/vim-scripts/TeTrIs.vim.git
-[submodule ".vim/bundle/winmanager"]
-	path = .vim/bundle/winmanager
-	url = https://github.com/vim-scripts/winmanager.git
 [submodule ".vim/bundle/SuperTab"]
 	path = .vim/bundle/SuperTab
 	url = https://github.com/vim-scripts/SuperTab.git
@@ -79,18 +70,9 @@
 [submodule ".vim/bundle/Emmet.vim"]
 	path = .vim/bundle/Emmet.vim
 	url = https://github.com/vim-scripts/Emmet.vim.git
-[submodule ".vim/bundle/maven-ide"]
-	path = .vim/bundle/maven-ide
-	url = https://github.com/vim-scripts/maven-ide.git
-[submodule ".vim/bundle/javacomplete"]
-	path = .vim/bundle/javacomplete
-	url = https://github.com/vim-scripts/javacomplete.git
 [submodule ".vim/bundle/The-NERD-Commenter"]
 	path = .vim/bundle/The-NERD-Commenter
 	url = https://github.com/vim-scripts/The-NERD-Commenter.git
-[submodule ".vim/bundle/JavaDecompiler.vim"]
-	path = .vim/bundle/JavaDecompiler.vim
-	url = https://github.com/vim-scripts/JavaDecompiler.vim.git
 [submodule ".vim/bundle/The-NERD-tree"]
 	path = .vim/bundle/The-NERD-tree
 	url = https://github.com/vim-scripts/The-NERD-tree.git
@@ -109,9 +91,6 @@
 [submodule ".vim/bundle/vim-easymotion"]
 	path = .vim/bundle/vim-easymotion
 	url = https://github.com/Lokaltog/vim-easymotion.git
-[submodule ".vim/bundle/JavaBrowser"]
-	path = .vim/bundle/JavaBrowser
-	url = https://github.com/vim-scripts/JavaBrowser.git
 [submodule ".vim/bundle/Auto-Pairs"]
 	path = .vim/bundle/Auto-Pairs
 	url = https://github.com/vim-scripts/Auto-Pairs.git
@@ -124,15 +103,9 @@
 [submodule ".vim/bundle/python_fold"]
 	path = .vim/bundle/python_fold
 	url = https://github.com/mcapell/python_fold.git
-[submodule ".vim/bundle/vim-autocomplpop"]
-	path = .vim/bundle/vim-autocomplpop
-	url = https://github.com/othree/vim-autocomplpop.git
 [submodule ".vim/bundle/vim-l9"]
 	path = .vim/bundle/vim-l9
 	url = https://github.com/git-mirror/vim-l9.git
-[submodule ".vim/bundle/Vim-R-plugin"]
-	path = .vim/bundle/Vim-R-plugin
-	url = https://github.com/vim-scripts/Vim-R-plugin.git
 [submodule ".vim/bundle/pythoncomplete.vim"]
 	path = .vim/bundle/pythoncomplete.vim
 	url = https://github.com/mjbrownie/pythoncomplete.vim.git
@@ -163,9 +136,6 @@
 [submodule ".vim/bundle/vim-fugitive"]
 	path = .vim/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule ".vim/bundle/gundo.vim"]
-	path = .vim/bundle/gundo.vim
-	url = https://github.com/sjl/gundo.vim.git
 [submodule ".vim/bundle/vim-makegreen"]
 	path = .vim/bundle/vim-makegreen
 	url = https://github.com/reinh/vim-makegreen.git
@@ -184,9 +154,6 @@
 [submodule ".vim/bundle/vim-snipmate"]
 	path = .vim/bundle/vim-snipmate
 	url = https://github.com/garbas/vim-snipmate.git
-[submodule ".vim/bundle/vim-addon-mw-utils"]
-	path = .vim/bundle/vim-addon-mw-utils
-	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
 [submodule ".vim/bundle/vim-surround"]
 	path = .vim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
@@ -214,3 +181,9 @@
 [submodule ".vim/bundle/vim-json-line-format"]
 	path = .vim/bundle/vim-json-line-format
 	url = https://github.com/vim-scripts/vim-json-line-format.git
+[submodule ".vim/bundle/vim-tmux"]
+	path = .vim/bundle/vim-tmux
+	url = https://github.com/tmux-plugins/vim-tmux.git
+[submodule ".vim/bundle/vim-javascript"]
+	path = .vim/bundle/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
