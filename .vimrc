@@ -1,4 +1,11 @@
 "http://xineohpanihc.iteye.com/blog/1146946
+"-------------------------pathogen--------------------------------
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
+Helptags
+" for windows update
+set nocp
+"-----------------------pathogen end------------------------------
 "--------------------------------------------------------------
 "General
 "--------------------------------------------------------------
@@ -315,13 +322,6 @@ func! Showpdf()
 endfunc
 "--------------------------LaTeX End-------------------------------------
 
-"-------------------------pathogen--------------------------------
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
-Helptags
-" for windows update
-set nocp
-"-----------------------pathogen end------------------------------
 
 "-----------------------powerline---------------------------------
 "let g:Powerline_symbols = 'fancy'
