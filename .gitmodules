@@ -49,15 +49,9 @@
 [submodule ".vim/bundle/vim-stylus"]
 	path = .vim/bundle/vim-stylus
 	url = https://github.com/wavded/vim-stylus.git
-[submodule ".vim/bundle/vim-texlog"]
-	path = .vim/bundle/vim-texlog
-	url = https://github.com/glts/vim-texlog.git
 [submodule ".vim/bundle/matlab.vim"]
 	path = .vim/bundle/matlab.vim
 	url = https://github.com/vim-scripts/matlab.vim.git
-[submodule ".vim/bundle/matlabvimcolours"]
-	path = .vim/bundle/matlabvimcolours
-	url = https://github.com/iveney/matlabvimcolours.git
 [submodule ".vim/bundle/vim-matlab-fold"]
 	path = .vim/bundle/vim-matlab-fold
 	url = https://github.com/djoshea/vim-matlab-fold.git
@@ -73,18 +67,12 @@
 [submodule ".vim/bundle/The-NERD-tree"]
 	path = .vim/bundle/The-NERD-tree
 	url = https://github.com/vim-scripts/The-NERD-tree.git
-[submodule ".vim/bundle/indentjava.vim"]
-	path = .vim/bundle/indentjava.vim
-	url = https://github.com/vim-scripts/indentjava.vim.git
 [submodule ".vim/bundle/minibufexpl.vim"]
 	path = .vim/bundle/minibufexpl.vim
 	url = https://github.com/vim-scripts/minibufexpl.vim.git
 [submodule ".vim/bundle/mru.vim"]
 	path = .vim/bundle/mru.vim
 	url = https://github.com/vim-scripts/mru.vim.git
-[submodule ".vim/bundle/tex_autoclose.vim"]
-	path = .vim/bundle/tex_autoclose.vim
-	url = https://github.com/vim-scripts/tex_autoclose.vim.git
 [submodule ".vim/bundle/vim-easymotion"]
 	path = .vim/bundle/vim-easymotion
 	url = https://github.com/Lokaltog/vim-easymotion.git

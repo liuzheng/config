@@ -43,7 +43,7 @@ CDPATH=$HOME/gitproject:/opt/gopath/src/github.com/liuzheng712/
 # ls
 alias ll='ls -l'
 alias la='ls -Al'
-alias ls='ls -FHG'
+alias ls='ls -FHG --color'
 alias lx='ls -lXB'
 alias lk='ls -lSr'
 alias lc='ls -lcr'
@@ -87,7 +87,7 @@ alias gitau='git add -u'
 alias gitA='git add -A'
 alias gitm='git commit'
 alias gitM='git commit -m'
-alias gits='git push'
+alias gits='git status'
 
 # grep
 alias grep='grep --color'
