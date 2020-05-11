@@ -21,14 +21,26 @@ NC=$reset_color
 source ~/config/kube-prompt.sh
 source ~/config/git-prompt.sh
 #============= git complete ===================
-#source ~/config/git-completion.bash
-
+zstyle ':completion:*:*:git:*' script ~/config/git-completion.zsh
+fpath=(~/.zsh $fpath)
+autoload -Uz compinit && compinit
 #==================color end====================
 PATH=$PATH:$HOME
 HISTSIZE=10000
 HISTFILESIZE=20000
 TF_ALIAS=fuck alias fuck='PYTHONIOENCODING=utf-8 eval $(thefuck $(fc -ln -1)); history -r'
 CDPATH=$HOME/gitproject
+if [ "$UID" -eq 0 ]; then
+  export PT='%#'
+else
+  export PT='\$'
+fi
+PROMPT="%{$GREEN%}[%{$RED%}%n%{$YELLOW%}@%{$GREEN%}%m%{$cyan%}:%U%{$black%}%~%u%{$NC%}%{$YELLOW%}\$(__ps1_git)%{$GREEN%}] >>%D %* << 
+%{$YELLOW%}\$(__kube_ps1)%{$NC%}%{$RED%}$PT%{$NC%} "
+
+
+#bind '"\e[A": history-search-backward'
+#bind '"\e[B": history-search-forward'
 
 #===================alias=======================
 # ls
@@ -104,45 +116,6 @@ export LC_ALL="C"
 export LANGUAGE=zh_CN.UTF-8
 
 #===================function====================
-function _fish_collapsed_pwd() {
-	local pwd="$1"
-	local home="$HOME"
-	local size=${#home}
-	[[ $# == 0 ]] && pwd="$PWD"
-	[[ -z "$pwd" ]] && return
-	if [[ "$pwd" == "/" ]]; then
-		echo "/"
-		return
-	elif [[ "$pwd" == "$home" ]]; then
-		echo "~"
-		return
-	fi
-	[[ "$pwd" == "$home/"* ]] && pwd="~${pwd:$size}"
-	if [[ -n "$BASH_VERSION" ]]; then
-		local IFS="/"
-		local elements=($pwd)
-		local length=${#elements[@]}
-		for ((i=0;i<length-1;i++)); do
-			local elem=${elements[$i]}
-			if [[ ${#elem} -gt 1 ]]; then
-				elements[$i]=${elem:0:1}
-			fi
-		done
-	else
-		local elements=("${(s:/:)pwd}")
-		local length=${#elements}
-		# print -l $elements
-		for i in {1..$((length-1))}; do
-			local elem=${elements[$i]}
-			if [[ ${#elem} > 1 ]]; then
-				elements[$i]=${elem[1]}
-			fi
-		done
-	fi
-	local IFS="/"
-	echo "${elements[*]}"
-}
-
 # pathogen rm bundle
 function vimrm()
 {
@@ -314,14 +287,5 @@ function dockerstart(){
 }
 alias dsit="dockers run --rm -v /var/run/docker.sock:/var/run/docker.sock nate/dockviz images -t"
 #==================function end=================
-if [ "$UID" -eq 0 ]; then
-  export PT='%#'
-else
-  export PT='\$'
-fi
-export PROMPT="%{$GREEN%}[%{$RED%}%n%{$YELLOW%}@%{$GREEN%}%m%{$cyan%}:%U%{$black%}$(_fish_collapsed_pwd)%u%{$NC%}%{$YELLOW%}\$(__ps1_git)%{$GREEN%}] >>%D %* << 
-%{$YELLOW%}\$(__kube_ps1)%{$NC%}%{$RED%}$PT%{$NC%} "
 
 
-#bind '"\e[A": history-search-backward'
-#bind '"\e[B": history-search-forward'
