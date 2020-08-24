@@ -178,6 +178,7 @@ function ii()
 
 # find file name
 function ff() { find . -type f -iname '*'$*'*' -ls ; }
+function ffd() { find . -type f -iname '*'$*'*' -ls -delete; }
 
 function psshc(){
       pssh -h ~/config/server.list -l root -P $1
