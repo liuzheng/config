@@ -31,7 +31,7 @@ HISTSIZE=10000000
 SAVEHIST=10000000
 HISTFILESIZE=20000
 TF_ALIAS=fuck alias fuck='PYTHONIOENCODING=utf-8 eval $(thefuck $(fc -ln -1)); history -r'
-CDPATH=$HOME/gitproject
+CDPATH=.:~:$HOME/gitproject
 if [ "$UID" -eq 0 ]; then
   export PT='%#'
 else
