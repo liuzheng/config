@@ -3,20 +3,19 @@ ln -s `pwd`/.vimrc $HOME/
 ln -s `pwd`/.vim $HOME/
 ln -s `pwd`/.inputrc $HOME/
 
-sudo cp `pwd`/locale.gen /etc/
-sudo locale-gen
 mkdir ~/.diary
 
-if (cat $HOME/.bashrc|grep "liuzheng_bashrc")
+git submodule update --init --depth 1
+if (cat $HOME/.zshrc|grep "liuzheng_zshrc")
 then
     echo "Already added"
 else
     echo "" >> $HOME/.bashrc
-    echo "source $PWD/.liuzheng_bashrc">>$HOME/.bashrc
+    echo "source $PWD/.liuzheng_zshrc">>$HOME/.zshrc
 fi
-git submodule update --init #--depth 1
-. ~/.bashrc
-sudo apt-get install ctags tmux cmake libpython-dev build-essential
-#cd `pwd`/.vim/bundle/YouCompleteMe
-#git submodule update --init --recursive #--depth 1
-#./install.sh --clang-completer
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+. ~/.zshrc
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew install npm wget axel htop
+npm install -g commitizen
+
