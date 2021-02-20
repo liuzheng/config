@@ -59,8 +59,8 @@ if [ -x ./thor/thor ]; then
   alias td='thor -r'
 fi
 
-source ~/config/.liuzheng_bashrc
-source ~/config/kubectl.bashrc
+#source ~/config/.liuzheng_bashrc
+#source ~/config/kubectl.bashrc
 #Enabling tab-completion
 complete -cf sudo
 
@@ -70,20 +70,19 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export GOLIB=/opt/gopath
 export GOPATH=$GOLIB
-export CARGO=/home/liuzheng/.cargo
 export PYTHON_HOME=/Users/liuzheng/Library/Python/3.7
-PATH="/usr/bin:$PYTHON_HOME/bin/:$PATH:"
-PATH="$CARGO/bin:$JAVAHOME/bin/:/usr/local/bin/:/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+PATH="/usr/bin:$PYTHON_HOME/bin/:$PATH:/Users/liuzheng/workarea/bin"
+PATH="$JAVAHOME/bin/:/usr/local/bin/:/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
 export PATH=$PATH:$GOLIB/bin:/usr/local/go/bin/:/opt/gopath/bin/FlameGraph
-export M2_HOME=/opt/apache-maven
+#export M2_HOME=/opt/apache-maven
 
-export NODE_PATH=/usr/local/lib/node_modules 
-export PATH=$PATH:$M2_HOME/bin
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+#export NODE_PATH=/usr/local/lib/node_modules 
+#export PATH=$PATH:$M2_HOME/bin:/usr/local/texlive/2020/bin/x86_64-darwin
+#export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export HISTSIZE=
 export HISTFILESIZE=
 
-alias gitpushdevelop="git push origin HEAD:refs/for/develop"
+#alias gitpushdevelop="git push origin HEAD:refs/for/develop"
 
 
 #if [ -f $(brew --prefix)/etc/bash_completion  ]; then
@@ -142,15 +141,18 @@ complete -o default -F _ng_completion ng
 export PATH="$HOME/.cargo/bin:$PATH"
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 
-export LDFLAGS="-L/usr/local/opt/openssl/lib"
-export CPPFLAGS="-I/usr/local/opt/openssl/include"
-export PATH="/usr/local/opt/openssl/bin:$PATH"
+#export LDFLAGS="-L/usr/local/opt/openssl/lib"
+#export CPPFLAGS="-I/usr/local/opt/openssl/include"
+#export PATH="/usr/local/opt/openssl/bin:$PATH"
 
-export PATH="/Applications/Electron.app/Contents/MacOS/:$PATH"
-export ELECTRON_MIRROR="https://npm.taobao.org/mirrors/electron/"
-export PATH="/usr/local/Cellar/node/13.2.0/bin/:$PATH"
-export PATH="/usr/local/opt/python@3.8/bin:$PATH"
+#export PATH="/Applications/Electron.app/Contents/MacOS/:$PATH"
+#export ELECTRON_MIRROR="https://npm.taobao.org/mirrors/electron/"
+#export PATH="/usr/local/Cellar/node/13.2.0/bin/:$PATH"
+#export PATH="/usr/local/opt/python@3.8/bin:$PATH"
 #export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
-export PATH="/usr/local/opt/ssh-copy-id/bin:$PATH"
-export GOROOT=/opt/go
+#export PATH="/usr/local/opt/ssh-copy-id/bin:$PATH"
+#export GOROOT=/opt/go
 
+export TEXINPUTS=.:/Users/liuzheng/Documents/LaTeX/liuzheng:
+export TTFONTS=$TEXINPUTS
+export OPENTYPEFONTS=$TEXINPUTS

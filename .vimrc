@@ -321,7 +321,7 @@ endfunc
 
 map <F9> :call Showpdf()<CR>
 func! Showpdf()
-    exec "!evince %:r.pdf &"
+    exec "!open %:r.pdf &"
 endfunc
 "--------------------------LaTeX End-------------------------------------
 
