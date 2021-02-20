@@ -34,7 +34,7 @@ set showmatch		"高亮匹配的括号
 set matchtime=5		"匹配括号高亮的时间（单位时十分之一秒）
 set softtabstop=4
 set listchars=tab:\|\ ,trail:.,extends:>,precedes:<,eol:$	"输入:set list命令是应该显示些啥？
-"set completeopt+=longest    " 让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
+set completeopt+=longest    " 让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
 set shortmess=atI	" 启动的时候不显示那个援助索马里儿童的提示
 "colorscheme desert	"配色方案
 syntax enable       " 开启语法高亮
@@ -264,7 +264,7 @@ inoremap <C-q> <C-x><C-o>
 "-----------------------------------------------------------------
 " F9 Ctags
 "-----------------------------------------------------------------
-map <C-F9> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR> 
+"map <C-F9> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR> 
 "-----------------------------------------------------------------
 " plugin - zencoding.vim 快速生成 HTML代码
 " CTRL+E 展开 zencoding 代码片段
@@ -354,18 +354,18 @@ set laststatus=2   " Always show the statusline
 
 
 "------------------- JavaComplete --------------------------------
-setlocal omnifunc=javacomplete#Complete
-autocmd Filetype java set omnifunc=javacomplete#Complete
-"autocmd Filetype java set completefunc=javacomplete#CompleteParamsInf
-inoremap <buffer> <C-X><C-U> <C-X><C-U><C-P> 
-inoremap <buffer> <C-S-Space> <C-X><C-U><C-P> 
-autocmd Filetype java,jsp inoremap .  .<C-X><C-O>
+"setlocal omnifunc=javacomplete#Complete
+"autocmd Filetype java set omnifunc=javacomplete#Complete
+""autocmd Filetype java set completefunc=javacomplete#CompleteParamsInf
+"inoremap <buffer> <C-X><C-U> <C-X><C-U><C-P> 
+"inoremap <buffer> <C-S-Space> <C-X><C-U><C-P> 
+"autocmd Filetype java,jsp inoremap .  .<C-X><C-O>
 
 "-----------------JavaBrowser------------------------------------
-let JavaBrowser_Ctags_Cmd = '/usr/bin/ctags'
-let JavaBrowser_Inc_Winwidth = 0
-map <F12> :JavaBrowser<CR>
-imap <F12> <ESC><F12>
+"let JavaBrowser_Ctags_Cmd = '/usr/bin/ctags'
+"let JavaBrowser_Inc_Winwidth = 0
+"map <F12> :JavaBrowser<CR>
+"imap <F12> <ESC><F12>
 
 "-----------------Python-----------------------------------------
 let g:pydiction_location='/home/liuzheng/.vim/bundle/Pydiction/complete-dict'
@@ -373,7 +373,10 @@ let g:pydiction_location='/home/liuzheng/.vim/bundle/Pydiction/complete-dict'
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=79
 
 "-----------------Jedi-------------------------------------------
-let g:jedi#use_tabs_not_buffers = 1
+"let g:jedi#use_tabs_not_buffers = 1
+let g:jedi#auto_initialization = 0
+let g:jedi#auto_vim_configuration = 0
+
 
 "-----------------rainbow-------------------------------------------
 let g:rainbow_active = 1
@@ -389,7 +392,7 @@ nnoremap <silent> {Previoust-Mapping} :TmuxNavigatePrevious<cr>
 
 
 "-----------------vim-gundo---------------------------------------
-nnoremap <F7> :MundoToggle<CR>
+nnoremap <F7> :GundoToggle<CR>
 
 "highlight Normal ctermfg=black ctermbg=180
 "-------------------NERDTre-----------------
@@ -399,3 +402,5 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 
 hi CursorLine  cterm=NONE   ctermbg=darkred ctermfg=white
 hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white
+
+let g:snipMate = { 'snippet_version' : 1 }
