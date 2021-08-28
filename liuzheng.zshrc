@@ -1,9 +1,9 @@
 #===================path=======================
-PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH:/opt/gopath/bin/"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 export PATH=$PATH:/Users/liuzheng/workarea/bin
 export CDPATH=.:~:$HOME/gitproject
-export TEXINPUTS=.:/Users/liuzheng/Documents/LaTeX/liuzheng//:
+export TEXINPUTS=.:/Users/liuzheng/Documents/LaTeX/liuzheng/:
 export TTFONTS=$TEXINPUTS
 export OPENTYPEFONTS=$TEXINPUTS
 
@@ -52,7 +52,7 @@ alias gitc='git clone'
 alias gpom='git push origin master'
 alias gitp='git pull'
 alias gita='git add'
-alias gitau='git add -u'
+alias gitaa='git add -u'
 alias gitA='git add -A'
 alias gitm='git commit'
 alias gitM='git commit -m'
@@ -79,7 +79,6 @@ function ff() { find . -type f -iname '*'$*'*' -ls ; }
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
 #===================autojump=======================
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
