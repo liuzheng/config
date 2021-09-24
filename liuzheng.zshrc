@@ -1,9 +1,23 @@
+#===================zsh========================
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+export ZSH_CUSTOM=$HOME/config/oh-my-zsh
+
+ZSH_THEME="powerlevel10k/powerlevel10k"
+plugins=(git autojump docker docker-compose zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+source $ZSH/oh-my-zsh.sh
 #===================path=======================
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH:/opt/gopath/bin/"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-export PATH=$PATH:/Users/liuzheng/workarea/bin
+export PATH=$PATH:$HOME/workarea/bin
 export CDPATH=.:~:$HOME/gitproject
-export TEXINPUTS=.:/Users/liuzheng/Documents/LaTeX/liuzheng/:
+export TEXINPUTS=.:$HOME/LaTeX-template/:
 export TTFONTS=$TEXINPUTS
 export OPENTYPEFONTS=$TEXINPUTS
 
