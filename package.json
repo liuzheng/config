@@ -1,34 +1,12 @@
 {
-  "name": "cz-conventional-changelog",
-  "version": "0.0.0-semantically-released.0",
-  "description": "Commitizen adapter following the conventional-changelog format.",
-  "main": "index.js",
-  "scripts": {
-    "commit": "git-cz",
-    "test": "echo 'Tests need to be setup!'",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
-  },
-  "homepage": "https://github.com/commitizen/cz-conventional-changelog",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/commitizen/cz-conventional-changelog.git"
-  },
-  "author": "Jim Cummins <jimthedev@gmail.com>",
-  "license": "MIT",
-  "dependencies": {
-    "word-wrap": "^1.0.3"
-  },
-  "devDependencies": {
-    "commitizen": "1.0.5",
-    "cz-conventional-changelog": "^1.1.5",
-    "semantic-release": "^4.3.5"
-  },
-  "czConfig": {
-    "path": "./"
+  "name": "liuzheng",
+  "version": "1.0.0",
+  "scripts":{
+    "preinstall":"npm install -g commitizen@latest cz-conventional-changelog@latest "
   },
   "config": {
     "commitizen": {
-      "path": "/usr/local/lib/node_modules/cz-conventional-changelog"
+      "path": "cz-conventional-changelog"
     }
   }
 }
