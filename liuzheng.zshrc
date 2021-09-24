@@ -17,6 +17,8 @@ PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH:/opt/gopath/bin/"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 export PATH=$PATH:$HOME/workarea/bin
 export CDPATH=.:~:$HOME/gitproject
+
+#===================LaTeX=======================
 export TEXINPUTS=.:$HOME/LaTeX-template/:
 export TTFONTS=$TEXINPUTS
 export OPENTYPEFONTS=$TEXINPUTS
