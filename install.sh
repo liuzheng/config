@@ -4,11 +4,11 @@ ln -s `pwd`/.vim $HOME/
 ln -s `pwd`/.inputrc $HOME/
 
 git submodule update --init --depth 1
-if (cat $HOME/.zshrc|grep "liuzheng_zshrc")
+if (cat $HOME/.zshrc|grep "liuzheng.zshrc")
 then
     echo "Already added"
 else
-    echo "source $PWD/liuzheng_zshrc">$HOME/.zshrc
+    echo "source $PWD/liuzheng.zshrc">$HOME/.zshrc
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 . ~/.zshrc

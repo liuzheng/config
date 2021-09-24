@@ -262,3 +262,6 @@
 	path = oh-my-zsh/themes/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
 	ignore = untracked
+[submodule "LaTeX/LaTeX-template"]
+	path = LaTeX/LaTeX-template
+	url = git@github.com:liuzheng/LaTeX-template.git

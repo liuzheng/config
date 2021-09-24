@@ -1,3 +1,4 @@
+CONFIG_PATH=$HOME/config
 #===================zsh========================
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -5,7 +6,7 @@ fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-export ZSH_CUSTOM=$HOME/config/oh-my-zsh
+export ZSH_CUSTOM=$CONFIG_PATH/oh-my-zsh
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git autojump docker docker-compose zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
@@ -19,7 +20,7 @@ export PATH=$PATH:$HOME/workarea/bin
 export CDPATH=.:~:$HOME/gitproject
 
 #===================LaTeX=======================
-export TEXINPUTS=.:$HOME/LaTeX-template/:
+export TEXINPUTS=.:$CONFIG_PATH/LaTeX/LaTeX-template/:
 export TTFONTS=$TEXINPUTS
 export OPENTYPEFONTS=$TEXINPUTS
 
