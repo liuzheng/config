@@ -1,4 +1,3 @@
-CONFIG_PATH=$HOME/config
 #===================zsh========================
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -101,3 +100,4 @@ export NVM_DIR="$HOME/.nvm"
 
 #===================kubectl=======================
 source <(kubectl completion zsh)
+

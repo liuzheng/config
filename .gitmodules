@@ -265,3 +265,6 @@
 [submodule "LaTeX/LaTeX-template"]
 	path = LaTeX/LaTeX-template
 	url = git@github.com:liuzheng/LaTeX-template.git
+[submodule ".vim/bundle/vim-airline"]
+	path = .vim/bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
