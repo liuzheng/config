@@ -404,3 +404,4 @@ hi CursorLine  cterm=NONE   ctermbg=darkred ctermfg=white
 hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white
 
 let g:snipMate = { 'snippet_version' : 1 }
+
