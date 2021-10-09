@@ -17,4 +17,6 @@ fi
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install npm wget axel htop
 npm install 
+echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
+
 
