@@ -39,24 +39,22 @@ pacstrap /mnt xorg xorg-drivers xorg-xinit xorg-xrandr xorg-twm xterm
 # GUI
 pacstrap /mnt gdm gnome gnome-extra qt fcitx fcitx-configtool fcitx-qt5 fcitx-gtk2 fcitx-gtk3 fcitx-googlepinyin powerline powerline-fonts wqy-zenhei wqy-microhei wqy-bitmapfont tor
 
-arch-chroot /mnt
-Xorg :0 -configure
-mv /root/xorg.conf.new /etc/X11/xorg.conf
+arch-chroot /mnt Xorg :0 -configure
+arch-chroot /mnt mv /root/xorg.conf.new /etc/X11/xorg.conf
+arch-chroot /mnt systemctl enable gdm
 
-systemctl enable gdm
+arch-chroot /mnt ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
-ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-
-hwclock --systohc
-cat <<EOF> /etc/locale.gen
+arch-chroot /mnt hwclock --systohc
+arch-chroot /mnt cat <<EOF> /etc/locale.gen
 en_US ISO-8859-1
 en_US.UTF-8 UTF-8
 zh_CN.GBK GBK
 zh_CN.UTF-8 UTF-8
 EOF
 
-locale-gen
-cat <<EOF> /etc/locale.conf
+arch-chroot /mnt locale-gen
+arch-chroot /mnt cat <<EOF> /etc/locale.conf
 LANG=zh_CN.UTF-8
 LC_NUMERIC=en_US.UTF-8
 LC_TIME=en_US.UTF-8
@@ -74,7 +72,7 @@ LC_ALL="C"
 LANGUAGE=zh_CN.UTF-8
 EOF
 
-echo "PC" > /etc/hostname
+arch-chroot /mnt echo "PC" > /etc/hostname
 
 echo "Please see the last commands in this file, clean command `grep -A100 exit archlinux.sh`"
 exit
