@@ -1,4 +1,5 @@
-
+#!/bin//bash
+set -ex
 # My Archlinux System 
 # https://zhuanlan.zhihu.com/p/384377987
 
@@ -6,12 +7,12 @@
 # Make Sure time is currect
 timedatectl set-ntp true
 
+# Install System
+pacstrap /mnt base linux linux-firmware
+
 genfstab -U /mnt > /mnt/etc/fstab
 
-
-# Install System
-
-pacstrap /mnt base linux linux-firmware zsh wget curl axel htop tree ntfs-3g exfat-utils zip unzip rar unrar p7zip tcpdump nmap grub
+pacstrap /mnt wget curl axel htop tree ntfs-3g exfat-utils zip unzip unrar p7zip tcpdump nmap grub ncdu
 
 pacstrap /mnt zsh zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-lovers zsh-syntax-highlighting
 
