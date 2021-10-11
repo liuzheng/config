@@ -2,6 +2,10 @@
 set -ex
 # My Archlinux System 
 # https://zhuanlan.zhihu.com/p/384377987
+if [ -d "/sys/firmware/efi" ]; then
+  echo "efi Please notice, Cancel or Enter to Continue"
+  read
+fi 
 
 
 # Make Sure time is currect
@@ -13,6 +17,9 @@ pacstrap /mnt base linux linux-firmware
 genfstab -U /mnt > /mnt/etc/fstab
 
 pacstrap /mnt wget curl axel htop tree ntfs-3g exfat-utils zip unzip unrar p7zip tcpdump nmap grub ncdu
+if [ -d "/sys/firmware/efi" ]; then
+  pacstrap /mnt efibootmgr 
+fi
 
 pacstrap /mnt zsh zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-lovers zsh-syntax-highlighting
 
@@ -51,7 +58,7 @@ pacstrap /mnt vim nano texlive-core texlive-langchinese
 pacstrap /mnt man-db man-pages texinfo
 
 # nettools
-pacstrap /mnt iproute2 
+pacstrap /mnt iproute2 networkmanager
 
 # devel language
 pacstrap /mnt go python python-pip nodejs npm rust gcc gdb 
@@ -67,6 +74,7 @@ pacstrap /mnt gdm gnome gnome-extra qt fcitx fcitx-configtool fcitx-qt5 fcitx-gt
 arch-chroot /mnt Xorg :0 -configure
 arch-chroot /mnt mv /root/xorg.conf.new /etc/X11/xorg.conf
 arch-chroot /mnt systemctl enable gdm
+arch-chroot /mnt systemctl enable NetworkManager
 
 arch-chroot /mnt ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
