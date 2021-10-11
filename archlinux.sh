@@ -36,7 +36,7 @@ pacstrap /mnt ctags tmux make cmake git docker docker-compose kubectl vscode fir
 pacstrap /mnt xorg xorg-drivers xorg-xinit xorg-xrandr xorg-twm xterm
 
 # GUI
-pacstrap /mnt gdm gnome gnome-extra qt5 fcitx fcitx-configtool fcitx-qt4 fcitx-qt5 fcitx-gtk2 fcitx-gtk3 fcitx-sogoupinyin powerline powerline-fonts wqy-zenhei wqy-microhei wqy-bitmapfont tor
+pacstrap /mnt gdm gnome gnome-extra qt fcitx fcitx-configtool fcitx-qt5 fcitx-gtk2 fcitx-gtk3 fcitx-googlepinyin powerline powerline-fonts wqy-zenhei wqy-microhei wqy-bitmapfont tor
 
 arch-chroot /mnt
 Xorg :0 -configure
