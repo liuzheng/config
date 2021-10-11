@@ -20,6 +20,31 @@ pacstrap /mnt thunderbird thunderbird-i18n-en-us thunderbird-i18n-zh-cn
 
 
 # editors
+arch-chroot /mnt cat <<EOF> /etc/locale.gen
+en_US ISO-8859-1
+en_US.UTF-8 UTF-8
+zh_CN.GBK GBK
+zh_CN.UTF-8 UTF-8
+EOF
+
+arch-chroot /mnt locale-gen
+arch-chroot /mnt cat <<EOF> /etc/locale.conf
+LANG=zh_CN.UTF-8
+LC_NUMERIC=en_US.UTF-8
+LC_TIME=en_US.UTF-8
+LC_COLLATE=en_US.UTF-8
+LC_MONETARY=en_US.UTF-8
+LC_MESSAGES=en_US.UTF-8
+LC_PAPER=en_US.UTF-8
+LC_NAME=en_US.UTF-8
+LC_ADDRESS=en_US.UTF-8
+LC_TELEPHONE=en_US.UTF-8
+LC_MEASUREMENT=en_US.UTF-8
+LC_IDENTIFICATION=en_US.UTF-8
+LC_CTYPE=zh_CN.UTF-8
+LC_ALL="C"
+LANGUAGE=zh_CN.UTF-8
+EOF
 pacstrap /mnt vim nano texlive-core texlive-langchinese
 
 # man
@@ -46,31 +71,6 @@ arch-chroot /mnt systemctl enable gdm
 arch-chroot /mnt ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 arch-chroot /mnt hwclock --systohc
-arch-chroot /mnt cat <<EOF> /etc/locale.gen
-en_US ISO-8859-1
-en_US.UTF-8 UTF-8
-zh_CN.GBK GBK
-zh_CN.UTF-8 UTF-8
-EOF
-
-arch-chroot /mnt locale-gen
-arch-chroot /mnt cat <<EOF> /etc/locale.conf
-LANG=zh_CN.UTF-8
-LC_NUMERIC=en_US.UTF-8
-LC_TIME=en_US.UTF-8
-LC_COLLATE=en_US.UTF-8
-LC_MONETARY=en_US.UTF-8
-LC_MESSAGES=en_US.UTF-8
-LC_PAPER=en_US.UTF-8
-LC_NAME=en_US.UTF-8
-LC_ADDRESS=en_US.UTF-8
-LC_TELEPHONE=en_US.UTF-8
-LC_MEASUREMENT=en_US.UTF-8
-LC_IDENTIFICATION=en_US.UTF-8
-LC_CTYPE=zh_CN.UTF-8
-LC_ALL="C"
-LANGUAGE=zh_CN.UTF-8
-EOF
 
 arch-chroot /mnt echo "PC" > /etc/hostname
 
