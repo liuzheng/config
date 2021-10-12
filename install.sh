@@ -18,5 +18,3 @@ fi
 brew install npm wget axel htop
 npm install 
 echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
-
-
