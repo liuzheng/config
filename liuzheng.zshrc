@@ -19,6 +19,7 @@ export PATH=$PATH:$HOME/workarea/bin
 export CDPATH=.:~:$HOME/gitproject
 
 #===================LaTeX=======================
+export PATH=$PATH:/Library/TeX/texbin
 export TEXINPUTS=.:$CONFIG_PATH/LaTeX/LaTeX-template/:
 export TTFONTS=$TEXINPUTS
 export OPENTYPEFONTS=$TEXINPUTS
