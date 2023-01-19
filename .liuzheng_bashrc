@@ -140,7 +140,7 @@ function vimgit()
 # pathogen git pull all
 function vimupdate()
 {
-git submodule foreach 'git checkout master && git clean -fx && git pull'
+git submodule foreach 'git clean -fx && git fetch && git reset --hard remotes/origin/HEAD'
 }
 
 # get ip

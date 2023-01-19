@@ -6,6 +6,8 @@ if [ -d "/sys/firmware/efi" ]; then
   echo "efi Please notice, Cancel or Enter to Continue"
   read
 fi 
+#pacman -S reflector
+#reflector --verbose --country 'China' -l 200 -p https --sort rate --save /etc/pacman.d/mirrorlist
 
 
 # Make Sure time is currect
