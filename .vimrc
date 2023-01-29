@@ -333,7 +333,7 @@ endfunc
 set nocompatible
 set t_Co=256
 let g:Powerline_cache_enabled = 1
-let g:Powerline_cache_file='/Users/liuzheng/.vim/bundle/powerline/Powerline.cache'
+let g:Powerline_cache_file='/tmp/Powerline.cache'
 set laststatus=2   " Always show the statusline 
 "-----------------------powerline end-----------------------------
 
