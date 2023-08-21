@@ -101,6 +101,8 @@ export NVM_DIR="$HOME/.nvm"
 
 #===================kubectl=======================
 source <(kubectl completion zsh)
+alias kubels='kubectl config get-contexts'
+alias kubeuse='kubectl config use-context'
 
 #=================== golang ======================
 # 配置 GOPROXY 环境变量
